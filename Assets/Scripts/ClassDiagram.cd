@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="AbilityCard">
+    <Position X="11.75" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AbilityCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AttackCard">
+    <Position X="14" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AttackCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Card">
+    <Position X="14.5" Y="2.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIQ=</HashCode>
+      <FileName>Assets\Scripts\Card.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Owner" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PowerCard">
+    <Position X="16.25" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PowerCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SummonCard">
+    <Position X="18.5" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SummonCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConditionCard">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ConditionCard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayableCard">
+    <Position X="14" Y="4.5" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAgACAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\PlayableCard.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CardEffects" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="CardHolder">
+    <Position X="5.75" Y="5.75" Width="4" />
+    <TypeIdentifier>
+      <HashCode>EgAAABAQEoCQCAAIAAFAAAQgAIAAABAgAgQAgBAQIQg=</HashCode>
+      <FileName>Assets\Scripts\CardHolder.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CardPlayer">
+    <Position X="7" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardPlayer.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="MainHero" />
+      <Field Name="SubHero" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Monster">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Scripts\Monster.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="CardPoor" />
+      <Property Name="MonsterAbilities" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Creep">
+    <Position X="3.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Creep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SummonedCreep">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SummonedCreep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MegaCreep">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MegaCreep.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss">
+    <Position X="6" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Effect">
+    <Position X="26.75" Y="8.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Effect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Attackffect">
+    <Position X="25" Y="10.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AttackEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingleAttackEffect">
+    <Position X="24" Y="12.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SingleAttackEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomAttackEffect">
+    <Position X="18.5" Y="12.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RandomAttackEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AllAttackEffect">
+    <Position X="29.5" Y="12.5" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AllAttackEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hero">
+    <Position X="4" Y="14" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\Hero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="HeroAbilities" />
+      <Property Name="HeroDefaultRelics" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="Ability">
+    <Position X="11.75" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\CardHolderAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroAbility">
+    <Position X="10.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HeroAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MonsterAbility">
+    <Position X="12.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\MonsterAbility.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Relics">
+    <Position X="3.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Relics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroRelics">
+    <Position X="3.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\HeroRelics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Buff">
+    <Position X="24.25" Y="5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAIAAAAAAAAQEAAAAgAgAABAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Buff.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="BuffEffect" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BlockEffect">
+    <Position X="41.75" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BlockEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SingleSelfBlockEffect">
+    <Position X="40.5" Y="12.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SingleSelfBlockEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ApplyBuffEffect">
+    <Position X="14.25" Y="10.25" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ApplyBuffEffect.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Buff" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="ApplySingleBuffEffect">
+    <Position X="13" Y="12.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ApplySingleBuffEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BuffEffect">
+    <Position X="35.5" Y="10.25" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\BuffEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EasilyInjuredBuffEffect">
+    <Position X="35" Y="12.25" Width="4.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EasilyInjuredBuffEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Microsoft YaHei UI" Size="9" />
+</ClassDiagram>
