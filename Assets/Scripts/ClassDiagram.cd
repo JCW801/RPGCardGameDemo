@@ -75,10 +75,12 @@
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.5" Y="8.426" />
-        <Point X="12.958" Y="8.426" Type="JumpStart" />
-        <Point X="12.792" Y="8.426" Type="JumpEnd" />
-        <Point X="10.375" Y="8.426" />
-        <Point X="10.375" Y="19.468" />
+        <Point X="13" Y="8.426" />
+        <Point X="13" Y="17" />
+        <Point X="12.833" Y="17" Type="JumpStart" />
+        <Point X="12.667" Y="17" Type="JumpEnd" />
+        <Point X="11.75" Y="17" />
+        <Point X="11.75" Y="19.468" />
         <Point X="10" Y="19.468" />
       </Path>
     </AssociationLine>
@@ -184,8 +186,10 @@
     <AssociationLine Name="HeroDefaultRelics" Type="HeroRelics" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="15.104" Y="11.163" />
-        <Point X="15.104" Y="12.713" />
-        <Point X="12.25" Y="12.713" />
+        <Point X="15.104" Y="12.963" />
+        <Point X="13.083" Y="12.963" Type="JumpStart" />
+        <Point X="12.917" Y="12.963" Type="JumpEnd" />
+        <Point X="11" Y="12.963" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="HeroCards" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
@@ -231,14 +235,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Relics">
-    <Position X="10.75" Y="10" Width="1.5" />
+    <Position X="8.75" Y="10" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Relics.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HeroRelics">
-    <Position X="10.75" Y="12.25" Width="1.5" />
+    <Position X="9.5" Y="12.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\HeroRelics.cs</FileName>
