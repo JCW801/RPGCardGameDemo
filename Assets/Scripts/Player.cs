@@ -11,9 +11,9 @@ public class Player
     public string PlayerName { get; set; }
 
     /// <summary>
-    /// 玩家持有的英雄及其卡牌数量
+    /// 玩家持有的英雄信息
     /// </summary>
-    public Dictionary<Hero,Dictionary<PlayableCard,int>> PlayerHeroAndCardDic { get; set; }
+    public PlayerHero[] PlayerHeros { get; set; }
 
     /// <summary>
     /// 玩家进入副本后的信息

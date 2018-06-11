@@ -75,6 +75,8 @@
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.5" Y="8.426" />
+        <Point X="12.958" Y="8.426" Type="JumpStart" />
+        <Point X="12.792" Y="8.426" Type="JumpEnd" />
         <Point X="10.375" Y="8.426" />
         <Point X="10.375" Y="19.468" />
         <Point X="10" Y="19.468" />
@@ -360,11 +362,27 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Player">
-    <Position X="10" Y="5.75" Width="2.5" />
+    <Position X="8.75" Y="3" Width="5.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CardPlayer" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="PlayerHeros" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="PlayerHero">
+    <Position X="9.75" Y="5.25" Width="3.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PlayerHero.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Hero" />
+    </ShowAsAssociation>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>
