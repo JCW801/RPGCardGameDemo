@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="AbilityCard">
-    <Position X="28.5" Y="14" Width="1.5" />
+    <Position X="29" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AbilityCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AttackCard">
-    <Position X="30.75" Y="14" Width="1.5" />
+    <Position X="31.25" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AttackCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Card">
-    <Position X="31.25" Y="9.5" Width="2.75" />
+    <Position X="31.75" Y="9.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIQ=</HashCode>
       <FileName>Assets\Scripts\Card.cs</FileName>
@@ -25,28 +25,28 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="PowerCard">
-    <Position X="33" Y="14" Width="1.5" />
+    <Position X="33.5" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SummonCard">
-    <Position X="35.25" Y="14" Width="1.5" />
+    <Position X="35.75" Y="14.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\SummonCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConditionCard">
-    <Position X="35.75" Y="11.5" Width="1.5" />
+    <Position X="36.25" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ConditionCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayableCard">
-    <Position X="30.75" Y="11.5" Width="3.5" />
+    <Position X="31.25" Y="11.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAgACAAAEAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayableCard.cs</FileName>
@@ -74,8 +74,8 @@
     </AssociationLine>
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.5" Y="8.426" />
-        <Point X="11.75" Y="8.426" />
+        <Point X="13.5" Y="8.188" />
+        <Point X="11.75" Y="8.188" />
         <Point X="11.75" Y="19.468" />
         <Point X="10" Y="19.468" />
       </Path>
@@ -102,7 +102,7 @@
         <Point X="25.84" Y="13.182" />
         <Point X="26.837" Y="13.182" Type="JumpStart" />
         <Point X="27.003" Y="13.182" Type="JumpEnd" />
-        <Point X="30.75" Y="13.182" />
+        <Point X="31.25" Y="13.182" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -187,7 +187,7 @@
         <Point X="19.333" Y="12.682" Type="JumpEnd" />
         <Point X="26.837" Y="12.682" Type="JumpStart" />
         <Point X="27.003" Y="12.682" Type="JumpEnd" />
-        <Point X="30.75" Y="12.682" />
+        <Point X="31.25" Y="12.682" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -221,7 +221,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Relic">
-    <Position X="8.75" Y="10" Width="2.75" />
+    <Position X="8.5" Y="10" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AgAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Assets\Scripts\Relic.cs</FileName>
@@ -356,6 +356,13 @@
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
+    <AssociationLine Name="CardPlayer" Type="CardPlayer" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.719" Y="3.827" />
+        <Point X="7.719" Y="7.812" />
+        <Point X="13.5" Y="7.812" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
