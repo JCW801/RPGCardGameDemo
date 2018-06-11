@@ -382,7 +382,7 @@
     <Position X="9.75" Y="5.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PlayerHero.cs</FileName>
+      <FileName>Assets\Scripts\PlayerHero.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Hero" />
