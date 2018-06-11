@@ -56,7 +56,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CardHolder">
-    <Position X="17.25" Y="5" Width="4" />
+    <Position X="17.5" Y="4.5" Width="4" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -72,12 +72,21 @@
         <Position X="-0.835" Y="0.151" />
       </MemberNameLabel>
     </AssociationLine>
+    <AssociationLine Name="CurrentDungeonRoom" Type="DungeonRoom" ManuallyRouted="true">
+      <Path>
+        <Point X="14.25" Y="7.5" />
+        <Point X="14.25" Y="2.259" />
+        <Point X="28.125" Y="2.259" />
+        <Point X="28.125" Y="6.248" />
+        <Point X="28.5" Y="6.248" />
+      </Path>
+    </AssociationLine>
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.5" Y="8.188" />
-        <Point X="11.75" Y="8.188" />
-        <Point X="11.75" Y="19.468" />
-        <Point X="10" Y="19.468" />
+        <Point X="13.125" Y="8.188" />
+        <Point X="13.125" Y="14.718" />
+        <Point X="12" Y="14.718" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -94,10 +103,10 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Monster">
-    <Position X="21" Y="13.25" Width="2" />
+    <Position X="20.75" Y="13.25" Width="2" />
     <AssociationLine Name="MonsterCardPoor" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="22.749" Y="13.25" />
+        <Point X="22.499" Y="13.25" />
         <Point X="25.84" Y="13.25" />
         <Point X="25.84" Y="13.182" />
         <Point X="26.837" Y="13.182" Type="JumpStart" />
@@ -183,8 +192,8 @@
       <Path>
         <Point X="15.906" Y="11.331" />
         <Point X="15.906" Y="12.682" />
-        <Point X="19.167" Y="12.682" Type="JumpStart" />
-        <Point X="19.333" Y="12.682" Type="JumpEnd" />
+        <Point X="19.417" Y="12.682" Type="JumpStart" />
+        <Point X="19.583" Y="12.682" Type="JumpEnd" />
         <Point X="26.837" Y="12.682" Type="JumpStart" />
         <Point X="27.003" Y="12.682" Type="JumpEnd" />
         <Point X="31.25" Y="12.682" />
@@ -297,7 +306,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Dungeon">
-    <Position X="25" Y="3.25" Width="2.75" />
+    <Position X="23" Y="3" Width="2.75" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Dungeon.cs</FileName>
@@ -342,7 +351,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Potion">
-    <Position X="5.75" Y="19.25" Width="4.25" />
+    <Position X="7.75" Y="14.5" Width="4.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Potion.cs</FileName>
@@ -356,10 +365,10 @@
     <Compartments>
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
-    <AssociationLine Name="CardPlayer" Type="CardPlayer" FixedFromPoint="true" FixedToPoint="true">
+    <AssociationLine Name="CardPlayer" Type="CardPlayer" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="7.719" Y="3.827" />
-        <Point X="7.719" Y="7.812" />
+        <Point X="7.938" Y="3.827" />
+        <Point X="7.938" Y="7.812" />
         <Point X="13.5" Y="7.812" />
       </Path>
     </AssociationLine>
