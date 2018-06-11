@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="AbilityCard">
-    <Position X="24.75" Y="15.75" Width="1.5" />
+    <Position X="28.5" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AbilityCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AttackCard">
-    <Position X="27" Y="15.75" Width="1.5" />
+    <Position X="30.75" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AttackCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Card">
-    <Position X="27.5" Y="11.25" Width="2.75" />
+    <Position X="31.25" Y="9.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIQ=</HashCode>
       <FileName>Assets\Scripts\Card.cs</FileName>
@@ -25,28 +25,28 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="PowerCard">
-    <Position X="29.25" Y="15.75" Width="1.5" />
+    <Position X="33" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SummonCard">
-    <Position X="31.5" Y="15.75" Width="1.5" />
+    <Position X="35.25" Y="14" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\SummonCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConditionCard">
-    <Position X="32" Y="13.25" Width="1.5" />
+    <Position X="35.75" Y="11.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ConditionCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayableCard">
-    <Position X="27" Y="13.25" Width="3.5" />
+    <Position X="30.75" Y="11.5" Width="3.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAgACAAAEAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayableCard.cs</FileName>
@@ -67,6 +67,11 @@
   </Class>
   <Class Name="CardPlayer">
     <Position X="13.5" Y="7.5" Width="1.5" />
+    <AssociationLine Name="SubHero" Type="Hero">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-0.835" Y="0.151" />
+      </MemberNameLabel>
+    </AssociationLine>
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.5" Y="8.426" />
@@ -93,11 +98,11 @@
     <AssociationLine Name="MonsterCardPoor" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="22.812" Y="13.25" />
-        <Point X="24.585" Y="13.25" Type="JumpStart" />
-        <Point X="24.751" Y="13.25" Type="JumpEnd" />
+        <Point X="24.917" Y="13.25" Type="JumpStart" />
+        <Point X="25.083" Y="13.25" Type="JumpEnd" />
         <Point X="25.84" Y="13.25" />
-        <Point X="25.84" Y="13.25" />
-        <Point X="27.062" Y="13.25" />
+        <Point X="25.84" Y="13.182" />
+        <Point X="30.75" Y="13.182" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -105,8 +110,8 @@
       <FileName>Assets\Scripts\Monster.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="MonsterAbilities" />
       <Property Name="MonsterCardPoor" />
+      <Property Name="MonsterAbilities" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Creep">
@@ -184,12 +189,12 @@
     <AssociationLine Name="HeroCards" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="15.906" Y="11.163" />
-        <Point X="15.906" Y="14.432" />
-        <Point X="22.167" Y="14.432" Type="JumpStart" />
-        <Point X="22.333" Y="14.432" Type="JumpEnd" />
-        <Point X="22.417" Y="14.432" Type="JumpStart" />
-        <Point X="22.583" Y="14.432" Type="JumpEnd" />
-        <Point X="27" Y="14.432" />
+        <Point X="15.906" Y="12.682" />
+        <Point X="19.167" Y="12.682" Type="JumpStart" />
+        <Point X="19.333" Y="12.682" Type="JumpEnd" />
+        <Point X="24.917" Y="12.682" Type="JumpStart" />
+        <Point X="25.083" Y="12.682" Type="JumpEnd" />
+        <Point X="30.75" Y="12.682" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -353,6 +358,13 @@
     <ShowAsAssociation>
       <Property Name="PosionEffect" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="Player">
+    <Position X="10" Y="5.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAABAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>
