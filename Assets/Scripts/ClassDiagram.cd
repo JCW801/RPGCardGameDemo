@@ -75,11 +75,7 @@
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="13.5" Y="8.426" />
-        <Point X="13" Y="8.426" />
-        <Point X="13" Y="17" />
-        <Point X="12.833" Y="17" Type="JumpStart" />
-        <Point X="12.667" Y="17" Type="JumpEnd" />
-        <Point X="11.75" Y="17" />
+        <Point X="11.75" Y="8.426" />
         <Point X="11.75" Y="19.468" />
         <Point X="10" Y="19.468" />
       </Path>
@@ -98,14 +94,14 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Monster">
-    <Position X="21.5" Y="13.25" Width="1.5" />
+    <Position X="21" Y="13.25" Width="2" />
     <AssociationLine Name="MonsterCardPoor" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="22.812" Y="13.25" />
-        <Point X="24.917" Y="13.25" Type="JumpStart" />
-        <Point X="25.083" Y="13.25" Type="JumpEnd" />
+        <Point X="22.749" Y="13.25" />
         <Point X="25.84" Y="13.25" />
         <Point X="25.84" Y="13.182" />
+        <Point X="26.837" Y="13.182" Type="JumpStart" />
+        <Point X="27.003" Y="13.182" Type="JumpEnd" />
         <Point X="30.75" Y="13.182" />
       </Path>
     </AssociationLine>
@@ -183,23 +179,14 @@
   </Class>
   <Class Name="Hero">
     <Position X="13.5" Y="10" Width="2.75" />
-    <AssociationLine Name="HeroDefaultRelics" Type="HeroRelics" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="15.104" Y="11.163" />
-        <Point X="15.104" Y="12.963" />
-        <Point X="13.083" Y="12.963" Type="JumpStart" />
-        <Point X="12.917" Y="12.963" Type="JumpEnd" />
-        <Point X="11" Y="12.963" />
-      </Path>
-    </AssociationLine>
     <AssociationLine Name="HeroCards" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="15.906" Y="11.163" />
+        <Point X="15.906" Y="11.331" />
         <Point X="15.906" Y="12.682" />
         <Point X="19.167" Y="12.682" Type="JumpStart" />
         <Point X="19.333" Y="12.682" Type="JumpEnd" />
-        <Point X="24.917" Y="12.682" Type="JumpStart" />
-        <Point X="25.083" Y="12.682" Type="JumpEnd" />
+        <Point X="26.837" Y="12.682" Type="JumpStart" />
+        <Point X="27.003" Y="12.682" Type="JumpEnd" />
         <Point X="30.75" Y="12.682" />
       </Path>
     </AssociationLine>
@@ -209,12 +196,11 @@
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="HeroAbilities" />
-      <Property Name="HeroDefaultRelics" />
       <Property Name="HeroCards" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Ability">
-    <Position X="13.25" Y="15.75" Width="1.5" />
+    <Position X="13.5" Y="15.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\CardHolderAbility.cs</FileName>
@@ -234,18 +220,18 @@
       <FileName>Assets\Scripts\MonsterAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Relics">
+  <Class Name="Relic">
     <Position X="8.75" Y="10" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Relics.cs</FileName>
+      <HashCode>AgAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Assets\Scripts\Relic.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="HeroRelics">
+  <Class Name="HeroRelic">
     <Position X="9.5" Y="12.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\HeroRelics.cs</FileName>
+      <FileName>Assets\Scripts\HeroRelic.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Buff">
@@ -311,7 +297,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Dungeon">
-    <Position X="23.75" Y="4.75" Width="2.75" />
+    <Position X="25" Y="3.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>IAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Dungeon.cs</FileName>
@@ -322,16 +308,16 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="DungeonRoom">
-    <Position X="27.25" Y="7.25" Width="2.25" />
+    <Position X="28.5" Y="5.75" Width="2.25" />
     <AssociationLine Name="NextRooms" Type="DungeonRoom" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="28.028" Y="7.25" />
-        <Point X="28.028" Y="6.875" />
-        <Point X="28.712" Y="6.875" Type="JumpStart" />
-        <Point X="28.879" Y="6.875" Type="JumpEnd" />
-        <Point X="29.875" Y="6.875" />
-        <Point X="29.875" Y="7.875" />
-        <Point X="29.5" Y="7.875" />
+        <Point X="29.278" Y="5.75" />
+        <Point X="29.278" Y="5.375" />
+        <Point X="29.962" Y="5.375" Type="JumpStart" />
+        <Point X="30.129" Y="5.375" Type="JumpEnd" />
+        <Point X="31.125" Y="5.375" />
+        <Point X="31.125" Y="6.375" />
+        <Point X="30.75" Y="6.375" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -346,7 +332,7 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="MonsterDungeonRoom">
-    <Position X="23.5" Y="9.25" Width="3" />
+    <Position X="25" Y="7.5" Width="3" />
     <TypeIdentifier>
       <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\MonsterDungeonRoom.cs</FileName>
@@ -366,7 +352,10 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="Player">
-    <Position X="8.75" Y="3" Width="5.5" />
+    <Position X="7.25" Y="3" Width="5.5" />
+    <Compartments>
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
     <TypeIdentifier>
       <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
@@ -379,7 +368,16 @@
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="PlayerHero">
-    <Position X="9.75" Y="5.25" Width="3.75" />
+    <Position X="8.25" Y="5.25" Width="3.75" />
+    <AssociationLine Name="Hero" Type="Hero" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="12" Y="5.748" />
+        <Point X="14.167" Y="5.748" Type="JumpStart" />
+        <Point X="14.333" Y="5.748" Type="JumpEnd" />
+        <Point X="16.062" Y="5.748" />
+        <Point X="16.062" Y="10" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayerHero.cs</FileName>
@@ -387,6 +385,27 @@
     <ShowAsAssociation>
       <Property Name="Hero" />
     </ShowAsAssociation>
+  </Class>
+  <Class Name="RestRoom">
+    <Position X="28.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RestRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MisteryShop">
+    <Position X="30.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\MisteryShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EventRoom">
+    <Position X="32.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\EventRoom.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />
 </ClassDiagram>

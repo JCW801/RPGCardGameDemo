@@ -23,7 +23,7 @@ public class Hero
     /// <summary>
     /// 英雄默认持有圣物
     /// </summary>
-    public HeroRelics[] HeroDefaultRelics { get; set; }
+    public HeroRelic[] HeroDefaultRelics { get; set; }
 
     /// <summary>
     /// 所有英雄专属卡牌

@@ -23,15 +23,5 @@ public abstract class Relics
     /// <summary>
     /// 圣物描述
     /// </summary>
-    public string RelicsDiscribe
-    {
-        get
-        {
-            throw new System.NotImplementedException();
-        }
-
-        set
-        {
-        }
-    }
+    public string RelicsDiscribe{get; set;}
 }
