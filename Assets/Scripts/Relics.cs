@@ -4,6 +4,7 @@ using System.Linq;
 
 public abstract class Relics
 {
+
     /// <summary>
     /// 圣物名称
     /// </summary>
@@ -18,4 +19,19 @@ public abstract class Relics
     /// 圣物效果
     /// </summary>
     public Effect RelicsEffect { get; set; }
+
+    /// <summary>
+    /// 圣物描述
+    /// </summary>
+    public string RelicsDiscribe
+    {
+        get
+        {
+            throw new System.NotImplementedException();
+        }
+
+        set
+        {
+        }
+    }
 }
