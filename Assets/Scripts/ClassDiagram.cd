@@ -66,11 +66,11 @@
     </TypeIdentifier>
   </Class>
   <Class Name="CardPlayer">
-    <Position X="13.5" Y="8" Width="1.5" />
+    <Position X="13.5" Y="7.5" Width="1.5" />
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="13.5" Y="8.926" />
-        <Point X="10.375" Y="8.926" />
+        <Point X="13.5" Y="8.426" />
+        <Point X="10.375" Y="8.426" />
         <Point X="10.375" Y="19.468" />
         <Point X="10" Y="19.468" />
       </Path>
@@ -90,13 +90,23 @@
   </Class>
   <Class Name="Monster">
     <Position X="21.5" Y="13.25" Width="1.5" />
+    <AssociationLine Name="MonsterCardPoor" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.812" Y="13.25" />
+        <Point X="24.585" Y="13.25" Type="JumpStart" />
+        <Point X="24.751" Y="13.25" Type="JumpEnd" />
+        <Point X="25.84" Y="13.25" />
+        <Point X="25.84" Y="13.25" />
+        <Point X="27.062" Y="13.25" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
       <FileName>Assets\Scripts\Monster.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="CardPoor" />
       <Property Name="MonsterAbilities" />
+      <Property Name="MonsterCardPoor" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Creep">
@@ -163,14 +173,33 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Hero">
-    <Position X="15" Y="9.75" Width="1.5" />
+    <Position X="13.5" Y="10" Width="2.75" />
+    <AssociationLine Name="HeroDefaultRelics" Type="HeroRelics" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.104" Y="11.163" />
+        <Point X="15.104" Y="12.713" />
+        <Point X="12.25" Y="12.713" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="HeroCards" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="15.906" Y="11.163" />
+        <Point X="15.906" Y="14.432" />
+        <Point X="22.167" Y="14.432" Type="JumpStart" />
+        <Point X="22.333" Y="14.432" Type="JumpEnd" />
+        <Point X="22.417" Y="14.432" Type="JumpStart" />
+        <Point X="22.583" Y="14.432" Type="JumpEnd" />
+        <Point X="27" Y="14.432" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAABAIAAAAAAAAAAACAABAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Hero.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="HeroAbilities" />
       <Property Name="HeroDefaultRelics" />
+      <Property Name="HeroCards" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Ability">
@@ -195,14 +224,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Relics">
-    <Position X="12" Y="10" Width="1.5" />
+    <Position X="10.75" Y="10" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Relics.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HeroRelics">
-    <Position X="12" Y="12.25" Width="1.5" />
+    <Position X="10.75" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\HeroRelics.cs</FileName>
@@ -277,8 +306,8 @@
       <FileName>Assets\Scripts\Dungeon.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="FinalRoom" />
       <Property Name="StartRoom" />
+      <Property Name="FinalRoom" />
     </ShowAsAssociation>
   </Class>
   <Class Name="DungeonRoom">
@@ -288,7 +317,7 @@
         <Point X="28.028" Y="7.25" />
         <Point X="28.028" Y="6.875" />
         <Point X="28.712" Y="6.875" Type="JumpStart" />
-        <Point X="28.878" Y="6.875" Type="JumpEnd" />
+        <Point X="28.879" Y="6.875" Type="JumpEnd" />
         <Point X="29.875" Y="6.875" />
         <Point X="29.875" Y="7.875" />
         <Point X="29.5" Y="7.875" />
