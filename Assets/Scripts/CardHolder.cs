@@ -48,11 +48,15 @@ public abstract class CardHolder
     /// <summary>
     /// 在被攻击前触发的事件
     /// </summary>
-    public event Action<CardHolder,CardHolder,int> PreTakeAttackEvent;
+    public event Action PreTakeAttackEvent;
     /// <summary>
     /// 在被攻击后触发的事件
     /// </summary>
     public event Action AfterTakeAttackEvent;
+    /// <summary>
+    /// 受到攻击的数值改变事件
+    /// </summary>
+    public event Func<int, int> TakeAttackDamageChangeEvent;
 
     /// <summary>
     /// 在格挡之前触发的事件
@@ -72,6 +76,10 @@ public abstract class CardHolder
     /// </summary>
     public event Action PreAttackEvent;
     /// <summary>
+    /// 攻击数值改变事件
+    /// </summary>
+    public event Func<int,int> AttackDamageChangeEvent;
+    /// <summary>
     /// 在攻击后触发的事件
     /// </summary>
     public event Action AfterAttackEvent;
@@ -84,6 +92,11 @@ public abstract class CardHolder
     /// 在受到伤害后触发的事件
     /// </summary>
     public event Action AfterTakeDamageEvent;
+
+    /// <summary>
+    /// 受到伤害的数值改变事件
+    /// </summary>
+    public event Func<int, int> TakeDamageChangeEvent;
 
     /// <summary>
     /// 在死亡时触发的事件
@@ -131,6 +144,11 @@ public abstract class CardHolder
             PreAttackEvent();
         }
 
+        if (AttackDamageChangeEvent != null)
+        {
+            damage = AttackDamageChangeEvent(damage);
+        }
+
         target.TakeAttack(this, damage);
 
         if (AfterAttackEvent != null)
@@ -148,7 +166,12 @@ public abstract class CardHolder
     {
         if (PreTakeAttackEvent != null)
         {
-            PreTakeAttackEvent(this, attacker, damage);
+            PreTakeAttackEvent();
+        }
+
+        if(TakeAttackDamageChangeEvent != null)
+        {
+            damage = TakeAttackDamageChangeEvent(damage);
         }
 
         if (CurrentBlockValue > 0)
@@ -200,6 +223,11 @@ public abstract class CardHolder
         if (PreTakeDamageEvent != null)
         {
             PreTakeDamageEvent();
+        }
+
+        if (TakeDamageChangeEvent != null)
+        {
+            damage = TakeDamageChangeEvent(damage);
         }
 
         if (damage < CurrentHealth)

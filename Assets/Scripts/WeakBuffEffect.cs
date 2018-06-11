@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
-public class EasilyInjuredBuffEffect : BuffEffect
+public class WeakBuffEffect : BuffEffect
 {
     /// <summary>
     /// 易伤倍数
@@ -16,25 +14,25 @@ public class EasilyInjuredBuffEffect : BuffEffect
         }
         set
         {
-            if (value >= 1)
+            if (value <= 1)
             {
                 multiplier = value;
             }
         }
     }
-    private static Double multiplier = 1.5;
+    private static Double multiplier = 0.75;
 
     public override void Invoke(CardHolder executor, ICollection<CardHolder> targets)
     {
-        executor.AttackDamageChangeEvent += EasilyInjured;
+        executor.TakeAttackDamageChangeEvent += Weak;
     }
 
-    public override void RemoveBuffEffect(CardHolder buffHolder)
+    public override void RemoveBuffEffect(CardHolder buffOwner)
     {
-        buffHolder.AttackDamageChangeEvent -= EasilyInjured;
+        buffOwner.TakeAttackDamageChangeEvent -= Weak;
     }
 
-    private int EasilyInjured(int damage)
+    private int Weak(int damage)
     {
         return Convert.ToInt32(Math.Round(damage * Multiplier));
     }
