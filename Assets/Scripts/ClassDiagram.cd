@@ -61,7 +61,7 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EggAABAQEoiQCQAIAAFAAAQgAIAAABAgAwQAoBAQIQg=</HashCode>
+      <HashCode>EggAABAQEoiQCQAIAAFAAGSgAIAAABAgAwQCoBAQIQg=</HashCode>
       <FileName>Assets\Scripts\CardHolder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -373,7 +373,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAACAAQAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -421,6 +421,20 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\EventRoom.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RecoverEffect">
+    <Position X="50.75" Y="22.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\RecoverEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AfterBattleRecoverEffect">
+    <Position X="50.75" Y="24.75" Width="4.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\AfterBattleRecoverEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Microsoft YaHei UI" Size="9" />

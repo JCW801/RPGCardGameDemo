@@ -23,5 +23,5 @@ public abstract class Relic
     /// <summary>
     /// 圣物描述
     /// </summary>
-    public string RelicsDiscribe{get; set;}
+    public string RelicsDescription{get; set;}
 }

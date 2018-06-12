@@ -5,4 +5,5 @@ using System.Text;
 
 public class HeroRelic : Relic
 {
+    public Hero Owner { get; set; }
 }

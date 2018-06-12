@@ -133,6 +133,16 @@ public abstract class CardHolder
     public event Action TurnEndEvent;
 
     /// <summary>
+    /// 战斗开始时触发的事件
+    /// </summary>
+    public event Action BattleStartEvent;
+
+    /// <summary>
+    /// 战斗结束时触发的事件
+    /// </summary>
+    public event Action<CardHolder> BattleEndEvent;
+
+    /// <summary>
     /// 攻击一个目标
     /// </summary>
     /// <param name="target">攻击目标</param>
@@ -296,6 +306,20 @@ public abstract class CardHolder
     }
 
     /// <summary>
+    /// 获得生命回复
+    /// </summary>
+    /// <param name="value"></param>
+    public void GainHealth(int value)
+    {
+        if (value > MaxHealth - CurrentHealth)
+        {
+            value = MaxHealth - CurrentHealth;
+        }
+
+        CurrentHealth += value;
+    }
+
+    /// <summary>
     /// 回合结束
     /// </summary>
     public void TurnEnd()
@@ -331,4 +355,30 @@ public abstract class CardHolder
             TurnStartEvent();
         }
     }
+
+    
+    /// <summary>
+    /// 战斗开始
+    /// </summary>
+    public void BattleStart()
+    {
+        if (BattleStartEvent != null)
+        {
+            BattleStartEvent();
+        }
+    }
+
+    /// <summary>
+    /// 战斗结束
+    /// </summary>
+    public void BattleEnd()
+    {
+        if (BattleEndEvent != null)
+        {
+            BattleEndEvent(this);
+        }
+    }
+
+
+
 }
