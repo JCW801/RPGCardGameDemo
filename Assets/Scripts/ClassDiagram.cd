@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
   <Class Name="AbilityCard">
-    <Position X="29" Y="14.5" Width="1.5" />
+    <Position X="29.25" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AbilityCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AttackCard">
-    <Position X="31.25" Y="14.5" Width="1.5" />
+    <Position X="31.5" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AttackCard.cs</FileName>
@@ -16,44 +16,82 @@
   </Class>
   <Class Name="Card">
     <Position X="31.75" Y="9.5" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="Card.Rarity" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="Card.Type" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Card.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <AssociationLine Name="CardEffects" Type="Effect" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="31.75" Y="11.185" />
+        <Point X="28.75" Y="11.185" />
+        <Point X="28.75" Y="21" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.858" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <AssociationLine Name="CardUpgradeEffects" Type="Effect" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="31.75" Y="10.844" />
+        <Point X="28.188" Y="10.844" />
+        <Point X="28.188" Y="21" />
+      </Path>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAIQ=</HashCode>
+      <HashCode>AAEAAECAAAAAAAAAAAAAAAgAABgAAAAACAAoAAAAAIQ=</HashCode>
       <FileName>Assets\Scripts\Card.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Owner" />
     </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Property Name="CardEffects" />
+      <Property Name="CardUpgradeEffects" />
+    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="PowerCard">
-    <Position X="33.5" Y="14.5" Width="1.5" />
+    <Position X="33.75" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PowerCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SummonCard">
-    <Position X="35.75" Y="14.5" Width="1.5" />
+    <Position X="36" Y="15.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\SummonCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ConditionCard">
-    <Position X="36.25" Y="11.5" Width="1.5" />
+    <Position X="37" Y="12.75" Width="1.5" />
+    <InheritanceLine Type="Card" FixedFromPoint="true">
+      <Path>
+        <Point X="34.5" Y="11.375" />
+        <Point X="36.625" Y="11.375" />
+        <Point X="36.625" Y="13.213" />
+        <Point X="37" Y="13.213" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\ConditionCard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayableCard">
-    <Position X="31.25" Y="11.5" Width="3.5" />
+    <Position X="31.25" Y="12.75" Width="3.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAAAAAgACAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAgCAAAAAAAgAAAAAEAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayableCard.cs</FileName>
     </TypeIdentifier>
-    <ShowAsCollectionAssociation>
-      <Property Name="CardEffects" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="CardHolder">
     <Position X="17.5" Y="4.5" Width="4" />
@@ -61,7 +99,7 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EggAABAQEoiQCQAIAAFAAGSgAIAAABAgAwQCoBAQIQg=</HashCode>
+      <HashCode>EggAABAQEoiQCQAIAAFAAGSgAIAAABAgAwQCoBAQMQg=</HashCode>
       <FileName>Assets\Scripts\CardHolder.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -72,13 +110,16 @@
         <Position X="-0.835" Y="0.151" />
       </MemberNameLabel>
     </AssociationLine>
-    <AssociationLine Name="CurrentDungeonRoom" Type="DungeonRoom" ManuallyRouted="true">
+    <AssociationLine Name="CurrentDungeonRoom" Type="DungeonRoom" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="14.25" Y="7.5" />
-        <Point X="14.25" Y="2.259" />
-        <Point X="28.125" Y="2.259" />
-        <Point X="28.125" Y="6.248" />
-        <Point X="28.5" Y="6.248" />
+        <Point X="14.25" Y="4.25" />
+        <Point X="24.292" Y="4.25" Type="JumpStart" />
+        <Point X="24.458" Y="4.25" Type="JumpEnd" />
+        <Point X="25.01" Y="4.25" Type="JumpStart" />
+        <Point X="25.177" Y="4.25" Type="JumpEnd" />
+        <Point X="29.062" Y="4.25" />
+        <Point X="29.062" Y="5.75" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
@@ -108,10 +149,12 @@
       <Path>
         <Point X="22.499" Y="13.25" />
         <Point X="25.84" Y="13.25" />
-        <Point X="25.84" Y="13.182" />
-        <Point X="26.837" Y="13.182" Type="JumpStart" />
-        <Point X="27.003" Y="13.182" Type="JumpEnd" />
-        <Point X="31.25" Y="13.182" />
+        <Point X="25.84" Y="14.989" />
+        <Point X="28.105" Y="14.989" Type="JumpStart" />
+        <Point X="28.271" Y="14.989" Type="JumpEnd" />
+        <Point X="28.667" Y="14.989" Type="JumpStart" />
+        <Point X="28.833" Y="14.989" Type="JumpEnd" />
+        <Point X="31.25" Y="14.989" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -161,7 +204,7 @@
   <Class Name="Attackffect">
     <Position X="23.5" Y="22.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAEAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAEAAAAAA=</HashCode>
       <FileName>Assets\Scripts\AttackEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -191,12 +234,18 @@
     <AssociationLine Name="HeroCards" Type="PlayableCard" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="15.906" Y="11.331" />
-        <Point X="15.906" Y="12.682" />
-        <Point X="19.417" Y="12.682" Type="JumpStart" />
-        <Point X="19.583" Y="12.682" Type="JumpEnd" />
-        <Point X="26.837" Y="12.682" Type="JumpStart" />
-        <Point X="27.003" Y="12.682" Type="JumpEnd" />
-        <Point X="31.25" Y="12.682" />
+        <Point X="15.906" Y="14.324" />
+        <Point X="21.667" Y="14.324" Type="JumpStart" />
+        <Point X="21.833" Y="14.324" Type="JumpEnd" />
+        <Point X="22.292" Y="14.324" Type="JumpStart" />
+        <Point X="22.458" Y="14.324" Type="JumpEnd" />
+        <Point X="25.757" Y="14.324" Type="JumpStart" />
+        <Point X="25.923" Y="14.324" Type="JumpEnd" />
+        <Point X="28.105" Y="14.324" Type="JumpStart" />
+        <Point X="28.271" Y="14.324" Type="JumpEnd" />
+        <Point X="28.667" Y="14.324" Type="JumpStart" />
+        <Point X="28.833" Y="14.324" Type="JumpEnd" />
+        <Point X="31.25" Y="14.324" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -232,14 +281,14 @@
   <Class Name="Relic">
     <Position X="8.5" Y="10" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAABAAAAAAAAAAAAAgAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AgAAAAAAABAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Relic.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="HeroRelic">
-    <Position X="9.5" Y="12.5" Width="1.5" />
+    <Position X="9" Y="12.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\HeroRelic.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -291,11 +340,11 @@
       <FileName>Assets\Scripts\BuffEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="EasilyInjuredBuffEffect">
+  <Class Name="VulnerableBuffEffect">
     <Position X="38.5" Y="24.5" Width="4.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAIAAAAAEAAAABAAAAAAAAACAAAAAAIAAA=</HashCode>
-      <FileName>Assets\Scripts\EasilyInjuredBuffEffect.cs</FileName>
+      <HashCode>AAAAAAAAAAAIAAAAAEAAAABAAAAAAAAACAAAAAAAEAA=</HashCode>
+      <FileName>Assets\Scripts\VulnerableBuffEffect.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="WeakBuffEffect">
@@ -373,7 +422,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAACAAQAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>

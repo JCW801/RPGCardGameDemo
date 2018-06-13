@@ -9,7 +9,7 @@ public class SingleAttackEffect : Attackffect
     {
         if (targets != null && targets.Count == 1)
         {
-            foreach (var item in Enumerable.Range(0,AttackTargetCount))
+            foreach (var item in Enumerable.Range(0,AttackTimes))
             {
                 executor.Attack(targets.GetEnumerator().Current, AttackDamage);
             }

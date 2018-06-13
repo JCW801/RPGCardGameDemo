@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-public class EasilyInjuredBuffEffect : BuffEffect
+public class VulnerableBuffEffect : BuffEffect
 {
     /// <summary>
     /// 易伤倍数
@@ -26,15 +26,15 @@ public class EasilyInjuredBuffEffect : BuffEffect
 
     public override void Invoke(CardHolder executor, ICollection<CardHolder> targets)
     {
-        executor.AttackDamageChangeEvent += EasilyInjured;
+        executor.AttackDamageChangeEvent += Vulnerable;
     }
 
     public override void RemoveBuffEffect(CardHolder buffHolder)
     {
-        buffHolder.AttackDamageChangeEvent -= EasilyInjured;
+        buffHolder.AttackDamageChangeEvent -= Vulnerable;
     }
 
-    private int EasilyInjured(int damage)
+    private int Vulnerable(int damage)
     {
         return Convert.ToInt32(Math.Round(damage * Multiplier));
     }

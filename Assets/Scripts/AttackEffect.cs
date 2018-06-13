@@ -8,6 +8,6 @@
     /// <summary>
     /// 攻击次数
     /// </summary>
-    public int AttackTargetCount { get; set; }
+    public int AttackTimes { get; set; }
 
 }

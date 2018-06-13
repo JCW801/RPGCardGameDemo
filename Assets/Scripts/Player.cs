@@ -11,16 +11,6 @@ public class Player
     public string PlayerName { get; set; }
 
     /// <summary>
-    /// 账号名称
-    /// </summary>
-    public string AccountName { get; set; }
-
-    /// <summary>
-    /// 密码
-    /// </summary>
-    public string Password { get; set; }
-
-    /// <summary>
     /// 玩家持有的英雄信息
     /// </summary>
     public PlayerHero[] PlayerHeros { get; set; }
