@@ -158,12 +158,11 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Monster.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
       <Property Name="MonsterCardPoor" />
-      <Property Name="MonsterAbilities" />
     </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Creep">
@@ -237,8 +236,6 @@
         <Point X="15.906" Y="14.324" />
         <Point X="21.667" Y="14.324" Type="JumpStart" />
         <Point X="21.833" Y="14.324" Type="JumpEnd" />
-        <Point X="22.292" Y="14.324" Type="JumpStart" />
-        <Point X="22.458" Y="14.324" Type="JumpEnd" />
         <Point X="25.757" Y="14.324" Type="JumpStart" />
         <Point X="25.923" Y="14.324" Type="JumpEnd" />
         <Point X="28.105" Y="14.324" Type="JumpStart" />
@@ -249,39 +246,24 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAIAAAAAAAAAAACAABAAAAAAAAAAAAEAA=</HashCode>
+      <HashCode>AAAAAAAAAABAIAAAAAAAAAAACAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Assets\Scripts\Hero.cs</FileName>
     </TypeIdentifier>
     <ShowAsCollectionAssociation>
-      <Property Name="HeroAbilities" />
       <Property Name="HeroCards" />
     </ShowAsCollectionAssociation>
   </Class>
-  <Class Name="Ability">
-    <Position X="13.5" Y="15.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\CardHolderAbility.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="HeroAbility">
-    <Position X="12" Y="17.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\HeroAbility.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MonsterAbility">
-    <Position X="16.25" Y="17.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\MonsterAbility.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="Relic">
     <Position X="8.5" Y="10" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="Relic.Rarity" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\Relic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AgAAAAAAABAAEAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAJAAgAAAAAAAAAAAAACQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Relic.cs</FileName>
     </TypeIdentifier>
   </Class>

@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
-public abstract class Relic
+public class RelicTransferModel
 {
-    public enum Rarity { Starter, Common, Uncommon, Rare, Boss, Event, Shop, Monster, UnavailableForPlayer }
-
     /// <summary>
     /// 圣物名称
     /// </summary>
@@ -17,9 +14,9 @@ public abstract class Relic
     public String RelicSpriteName { get; set; }
 
     /// <summary>
-    /// 圣物效果
+    /// 圣物效果字符串
     /// </summary>
-    public Effect RelicEffect { get; set; }
+    public List<string> RelicEffectsString { get; set; }
 
     /// <summary>
     /// 圣物描述
@@ -29,5 +26,5 @@ public abstract class Relic
     /// <summary>
     /// 圣物类型
     /// </summary>
-    public Rarity RelicRarity { get; set; }
+    public Relic.Rarity RelicRarity { get; set; }
 }
