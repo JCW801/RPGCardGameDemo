@@ -7,5 +7,4 @@ public class MisteryShop : DungeonRoom
 {
     public Relic[] Relics { get; set; }
     public Card[] Cards { get; set; }
-
 }
