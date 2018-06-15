@@ -291,7 +291,7 @@ public abstract class CardHolder
 
         if (Debuffs.ContainsKey(buff.BuffName))
         {
-            Debuffs[buff.BuffName].BuffLastTurn += lastTurn;
+            Debuffs[buff.BuffName].BuffIncrease(lastTurn);
         }
         else
         {
@@ -332,7 +332,7 @@ public abstract class CardHolder
         List<string> temp = new List<string>();
         foreach (var item in Debuffs)
         {
-            item.Value.BuffLastTurn--;
+            item.Value.BuffDecrease(1);
             if (item.Value.BuffLastTurn == 0)
             {
                 item.Value.BuffEnd(this);

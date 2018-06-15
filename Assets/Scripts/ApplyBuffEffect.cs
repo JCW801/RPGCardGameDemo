@@ -14,4 +14,10 @@ public abstract class ApplyBuffEffect : Effect
     /// buff持续时间
     /// </summary>
     public int BuffLastTrun { get; set; }
+
+    public override void SetEffect(List<string> s)
+    {
+        Buff = new Buff(s[0]);
+        BuffLastTrun = Convert.ToInt32(s[1]);
+    }
 }

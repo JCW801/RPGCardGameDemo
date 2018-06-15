@@ -5,7 +5,7 @@ using System.Text;
 
 public class PlayerTransferModel
 {
-    public enum TransferStateType {Error, Accept, Decline}
+    public enum TransferStateType { Error, Accept, Decline }
 
     public enum TransferRequestType { Login }
 
@@ -40,10 +40,14 @@ public class PlayerTransferModel
     public string Password { get; set; }
 
     /// <summary>
-    /// 玩家拥有英雄
+    /// 玩家拥有英雄名
     /// </summary>
-    public List<HeroTransferModel> PlayerHeroList { get; set; }
+    public List<string> PlayerHeroList { get; set; }
 
+    /// <summary>
+    /// 玩家拥有卡牌信息
+    /// </summary>
+    public Dictionary<string, int> PlayerCardList { get; set; }
 
     public PlayerTransferModel Clone()
     {
@@ -55,7 +59,7 @@ public class PlayerTransferModel
         clone.PlayerName = PlayerName;
         clone.AccountName = AccountName;
         clone.Password = Password;
-        clone.PlayerHeroList = new List<HeroTransferModel>(PlayerHeroList.ToArray());
+        clone.PlayerHeroList = new List<string>(PlayerHeroList.ToArray());
 
         return clone;
     }

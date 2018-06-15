@@ -1,7 +1,9 @@
-﻿public abstract class Monster : CardHolder
+﻿using System.Collections.Generic;
+
+public abstract class Monster : CardHolder
 {
     /// <summary>
     /// 怪物所持卡牌
     /// </summary>
-    public PlayableCard[] MonsterCardPoor { get; set; }
+    public List<Card> MonsterCardPoor { get; set; }
 }

@@ -9,4 +9,10 @@ public abstract class RecoverEffect : Effect
     /// 生命回复值
     /// </summary>
     public int RecoverValue { get; set; }
+
+
+    public override void SetEffect(List<string> s)
+    {
+        RecoverValue = Convert.ToInt32(s[0]);
+    }
 }
