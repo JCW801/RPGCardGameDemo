@@ -12,7 +12,7 @@ public class PlayerTransferModel
     /// <summary>
     /// 传输状态信息
     /// </summary>
-    public string TransferStateMessage { get; set; }
+    public string TransferMessage { get; set; }
 
     /// <summary>
     /// 传输状态
@@ -53,14 +53,16 @@ public class PlayerTransferModel
     {
         PlayerTransferModel clone = new PlayerTransferModel();
 
-        clone.TransferStateMessage = TransferStateMessage;
+        clone.TransferMessage = TransferMessage;
         clone.TransferState = TransferState;
         clone.TransferRequest = TransferRequest;
         clone.PlayerName = PlayerName;
         clone.AccountName = AccountName;
         clone.Password = Password;
-        clone.PlayerHeroList = new List<string>(PlayerHeroList.ToArray());
-
+        if (PlayerHeroList != null)
+        {
+            clone.PlayerHeroList = new List<string>(PlayerHeroList.ToArray());
+        }
         return clone;
     }
 }
