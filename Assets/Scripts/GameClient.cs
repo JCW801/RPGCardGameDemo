@@ -54,7 +54,7 @@ public class GameClient
         if (socketState == null)
         {
             player.TransferState = PlayerTransferModel.TransferStateType.Error;
-            player.TransferStateMessage = "没有连接到服务器";
+            player.TransferMessage = "没有连接到服务器";
             _callback(player.Clone());
             return;
         }

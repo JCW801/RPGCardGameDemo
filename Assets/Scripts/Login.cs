@@ -22,6 +22,7 @@ namespace Assets.Scripts
         {
             player.AccountName = userName.text;
             player.Password = passWord.text;
+            print("Login");
             GameClient.Client.Login(player.AccountName, player.Password, _callback);
         }
 
@@ -52,7 +53,7 @@ namespace Assets.Scripts
         IEnumerator LoadScene()
         {
             yield return new WaitForSeconds(2);
-            SceneManager.LoadScene("Start");
+            SceneManager.LoadScene("02Start");
         }
         public void InputAgain()
         {
