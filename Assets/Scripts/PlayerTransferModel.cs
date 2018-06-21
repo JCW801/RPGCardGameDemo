@@ -7,7 +7,7 @@ public class PlayerTransferModel
 {
     public enum TransferStateType { Error, Accept, Decline }
 
-    public enum TransferRequestType { Login }
+    public enum TransferRequestType { Login, EnterDungeon }
 
     /// <summary>
     /// 传输状态信息
@@ -49,6 +49,11 @@ public class PlayerTransferModel
     /// </summary>
     public Dictionary<string, int> PlayerCardList { get; set; }
 
+    /// <summary>
+    /// 玩家进入副本时的信息
+    /// </summary>
+    public CardPlayerTransferModel CardPlayer { get; set; }
+
     public PlayerTransferModel Clone()
     {
         PlayerTransferModel clone = new PlayerTransferModel();
@@ -66,4 +71,3 @@ public class PlayerTransferModel
         return clone;
     }
 }
-

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 
-public class DungeonRoom
+public class DungeonRoomTransferModel
 {
     public enum RoomType { NormalMonsterRoom, EliteMonsterRoom, TreasureRoom, BossMonsterRoom, ShoppingRoom, EventRoom, BonfireRoom }
 
@@ -35,12 +36,4 @@ public class DungeonRoom
     /// 是否连接下一层右房间
     /// </summary>
     public bool HasNextRightRoom { get; set; }
-
-
-    public DungeonRoom Clone()
-    {
-        var result = new DungeonRoom();
-
-        return new DungeonRoom();
-    }
 }

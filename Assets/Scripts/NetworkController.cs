@@ -144,6 +144,11 @@ public static class NetworkController
     {
         SocketState ss = (SocketState)ar.AsyncState;
 
+        if (ss.TheSocket.Connected == false)
+        {
+            return;
+        }
+
         int bytesRead = ss.TheSocket.EndReceive(ar);
 
         // If the socket is still open
@@ -253,7 +258,7 @@ public static class NetworkController
     {
         String Mac = "";
         IPAddress ip;
-        if (!IPAddress.TryParse(ipAddr,out ip))
+        if (!IPAddress.TryParse(ipAddr, out ip))
         {
             return false;
         }
@@ -294,7 +299,7 @@ public static class NetworkController
 
         byte[] end = { 0, 0, 0, 0 };
         byte[] start = { 0, 0, 0, 0 };
-        
+
 
         foreach (int i in Enumerable.Range(0, 4))
         {
@@ -447,5 +452,3 @@ public class TcpState
         TheTcpListener = tcpListener;
     }
 }
-
-

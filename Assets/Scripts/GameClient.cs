@@ -21,7 +21,7 @@ public class GameClient
         }
         private set
         {
-
+            client = value;
         }
     }
     private static GameClient client;
@@ -34,14 +34,13 @@ public class GameClient
 
     private PlayerCallbackPlayerDelegate playerCallback;
 
-    private GameClient() { }  
+    private GameClient() { }
 
     public void ConnectToServer(CallbackDelegate _callback)
     {
         NetworkController.ConnectToServer(ConnectToServerCallback, ServerIp);
         callback = _callback;
     }
-
 
     private void ConnectToServerCallback(SocketState ss)
     {
@@ -70,7 +69,8 @@ public class GameClient
 
     private void LoginCallback(SocketState ss)
     {
-        playerCallback(JsonConvert.DeserializeObject<PlayerTransferModel>(ss.SB.ToString()));
+        player = JsonConvert.DeserializeObject<PlayerTransferModel>(ss.SB.ToString());
+        playerCallback(player.Clone());
         ss.SB = new System.Text.StringBuilder();
     }
 }
