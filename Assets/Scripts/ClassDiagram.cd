@@ -15,7 +15,7 @@
       </Enum>
     </NestedTypes>
     <TypeIdentifier>
-      <HashCode>QABAgAAAAAAAgAAAAAAAGABAAAAIEIAIAAAABAgACAA=</HashCode>
+      <HashCode>QABAgAAAAAAAgAAAAAAACABAABAIEIAIAAAAAAgACAQ=</HashCode>
       <FileName>Assets\Scripts\Card.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -40,10 +40,6 @@
       <Path>
         <Point X="14.25" Y="7.5" />
         <Point X="14.25" Y="4.25" />
-        <Point X="24.292" Y="4.25" Type="JumpStart" />
-        <Point X="24.458" Y="4.25" Type="JumpEnd" />
-        <Point X="25.01" Y="4.25" Type="JumpStart" />
-        <Point X="25.177" Y="4.25" Type="JumpEnd" />
         <Point X="29.062" Y="4.25" />
         <Point X="29.062" Y="5.75" />
       </Path>
@@ -142,7 +138,7 @@
   <Class Name="Hero">
     <Position X="13.5" Y="10" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAEAAEIgAAAAAAAgAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAEAAAIgAABAAAAgAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Assets\Scripts\Hero.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -222,37 +218,23 @@
   <Class Name="Dungeon">
     <Position X="23" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAEAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>IAAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Dungeon.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="StartRoom" />
-      <Property Name="FinalRoom" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="DungeonRoom">
     <Position X="28.5" Y="5.75" Width="2.25" />
-    <AssociationLine Name="NextRooms" Type="DungeonRoom" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="29.278" Y="5.75" />
-        <Point X="29.278" Y="5.375" />
-        <Point X="29.962" Y="5.375" Type="JumpStart" />
-        <Point X="30.129" Y="5.375" Type="JumpEnd" />
-        <Point X="31.125" Y="5.375" />
-        <Point X="31.125" Y="6.375" />
-        <Point X="30.75" Y="6.375" />
-      </Path>
-    </AssociationLine>
+    <NestedTypes>
+      <Enum Name="DungeonRoom.RoomType" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Assets\Scripts\DungeonRoom.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAgAAAAAAAA=</HashCode>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAQAAAAEBAQAQAAAAAAABA=</HashCode>
       <FileName>Assets\Scripts\DungeonRoom.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Field Name="RoomDungeon" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="NextRooms" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="MonsterDungeonRoom">
     <Position X="25" Y="7.5" Width="3" />
@@ -280,29 +262,15 @@
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAQAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAACAAAAAQAAAEAAAgAAAAAAAAAAAAAAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerHero">
     <Position X="8.25" Y="5.25" Width="3.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAEAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAAAAAAAIAAhAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayerHero.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RestRoom">
-    <Position X="28.75" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\RestRoom.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MisteryShop">
-    <Position X="30.75" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAACAA=</HashCode>
-      <FileName>Assets\Scripts\MisteryShop.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="EventRoom">

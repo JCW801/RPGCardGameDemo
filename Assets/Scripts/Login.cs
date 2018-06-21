@@ -4,12 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using System.IO;
 
 namespace Assets.Scripts
 {
     class Login : MonoBehaviour
     {
-        public PlayerTransferModel player = new PlayerTransferModel();
+        public static Player Player { get; private set; }
+        private PlayerTransferModel playerModel = new PlayerTransferModel();
         public InputField userName;
         public InputField passWord;
         public Text connectInfo;
@@ -20,31 +24,32 @@ namespace Assets.Scripts
         }
         public void GetPlayerLoginInfo()
         {
-            player.AccountName = userName.text;
-            player.Password = passWord.text;
+            playerModel.AccountName = userName.text;
+            playerModel.Password = passWord.text;
             print("Login");
-            GameClient.Client.Login(player.AccountName, player.Password, _callback);
+            GameClient.Client.Login(playerModel.AccountName, playerModel.Password, _callback);
         }
 
         private void _callback(PlayerTransferModel _player)
         {
-            player = _player;
+            playerModel = _player;
         }
 
         private void Update()
         {
             //throw new NotImplementedException();
-            if (player != null && (player.TransferMessage != null || player.PlayerName != null))
+            if (playerModel != null && (playerModel.TransferMessage != null || playerModel.PlayerName != null))
             {
                 go.SetActive(true);
-                if (player.TransferState == PlayerTransferModel.TransferStateType.Error || player.TransferState == PlayerTransferModel.TransferStateType.Decline)
+                if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Error || playerModel.TransferState == PlayerTransferModel.TransferStateType.Decline)
                 {
-                    connectInfo.text = player.TransferMessage;
-                    player.TransferMessage = null;
+                    connectInfo.text = playerModel.TransferMessage;
+                    playerModel.TransferMessage = null;
                 }
-                else if (player.TransferState == PlayerTransferModel.TransferStateType.Accept)
+                else if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Accept)
                 {
-                    connectInfo.text = player.TransferMessage + "   载入中。。。请稍候";
+                    Player = new Player(playerModel, JsonConvert.DeserializeObject<GameDictionary>(JToken.Parse(File.ReadAllText("GameDic.json")).ToString()));
+                    connectInfo.text = playerModel.TransferMessage + "   载入中。。。请稍候";
                     StartCoroutine(LoadScene());
                 }
             }
