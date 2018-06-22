@@ -20,6 +20,11 @@ public class Player
     /// </summary>
     private CardPlayer cardPlayer;
 
+    /// <summary>
+    /// 副本信息
+    /// </summary>
+    private Dungeon dungeon;
+
     public Player(PlayerTransferModel player, GameDictionary gameDic)
     {
         playerName = player.PlayerName;
@@ -52,5 +57,19 @@ public class Player
             }
         }
         return false;
+    }
+
+    public bool EnterDungeon(DungeonTransferModel dungeonTransferModel, CardPlayerTransferModel cp, GameDictionary gameDic)
+    {
+        if (cardPlayer == null && dungeon == null)
+        {
+            cardPlayer = new CardPlayer(cp, gameDic);
+            dungeon = new Dungeon(dungeonTransferModel);
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }

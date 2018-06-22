@@ -21,9 +21,9 @@ public class HeroTransferModel
     public int HeroHealth { get; set; }
 
     /// <summary>
-    /// 英雄初始金钱
+    /// 英雄最大蓝量
     /// </summary>
-    public int HeroGold { get; set; }
+    public int HeroMana { get; set; }
 
     /// <summary>
     /// 英雄默认遗物

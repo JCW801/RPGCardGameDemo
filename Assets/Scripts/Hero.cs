@@ -12,17 +12,17 @@ public class Hero
     /// <summary>
     /// 英雄对应图片文件名
     /// </summary>
-    private string heroSpriteName;
+    public string HeroSpriteName { get; private set; }
 
     /// <summary>
-    /// 英雄初始金钱
+    /// 英雄初始蓝量
     /// </summary>
-    private int heroGold;
+    public int HeroMana { get; private set; }
 
     /// <summary>
     /// 英雄初始血量
     /// </summary>
-    private int heroHealth;
+    public int HeroHealth { get; private set; }
 
     /// <summary>
     /// 英雄默认卡牌及数量
@@ -42,9 +42,9 @@ public class Hero
     public Hero(HeroTransferModel hero, GameDictionary gameDic)
     {
         HeroName = hero.HeroName;
-        heroSpriteName = hero.HeroSprite;
-        heroHealth = hero.HeroHealth;
-        heroGold = hero.HeroGold;
+        HeroSpriteName = hero.HeroSprite;
+        HeroHealth = hero.HeroHealth;
+        HeroMana = hero.HeroMana;
 
         heroBasicCard = new Dictionary<Card, int>();
         foreach (var item in hero.HeroBasicCard)

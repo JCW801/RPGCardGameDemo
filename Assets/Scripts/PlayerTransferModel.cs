@@ -54,6 +54,11 @@ public class PlayerTransferModel
     /// </summary>
     public CardPlayerTransferModel CardPlayer { get; set; }
 
+    /// <summary>
+    /// 玩家进入的副本信息
+    /// </summary>
+    public DungeonTransferModel Dungeon { get; set; }
+
     public PlayerTransferModel Clone()
     {
         PlayerTransferModel clone = new PlayerTransferModel();
