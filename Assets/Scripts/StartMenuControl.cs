@@ -8,13 +8,14 @@ public class StartMenuControl : MonoBehaviour {
     PlayerTransferModel player;
     public Text HeroName;
     public GameObject HeroModel;
-    public Button CreatNewRole;
-    public Button NextRole;
-    public Button LastRole;
+    //public Button CreatNewRole;
+    //public Button NextRole;
+    //public Button LastRole;
+    //public Button GetIn;
 	// Use this for initialization
 	void Start ()
     {
-        player = new PlayerTransferModel();
+        player = GameClient.Client.player;
         string name = player.PlayerHeroList[0];
         HeroName.text = name;
         HeroModel = (GameObject)(Resources.Load(name));
@@ -25,6 +26,10 @@ public class StartMenuControl : MonoBehaviour {
 	void Update () {
 		
 	}
+    public void NextScene()
+    {
+
+    }
     public void HeroModelControl()
     {
 

@@ -28,7 +28,7 @@ public class GameClient
 
     private SocketState socketState;
 
-    private PlayerTransferModel player = new PlayerTransferModel();
+    public PlayerTransferModel player = new PlayerTransferModel();
 
     private CallbackDelegate callback;
 
