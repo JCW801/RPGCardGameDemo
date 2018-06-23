@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class StartMenuControl : MonoBehaviour
 {
 
-    PlayerTransferModel player =new PlayerTransferModel();
+    Player player;
     public Text HeroName;
     GameObject HeroModel;
     AsyncOperation async;
@@ -19,10 +19,10 @@ public class StartMenuControl : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameClient.Client.player;
-        if (player.PlayerName != null && player.PlayerHeroList.Count != 0)
+        player = GameClient.Client.Player;
+        if (player.PlayerName != null && player.PlayerHeros.Count != 0)
         {
-            string name = player.PlayerHeroList[index];
+            string name = player.PlayerHeros[index].GetHeroName();
             HeroName.text = name;
             HeroModel = (GameObject)(Resources.Load(name));
             HeroModel = Instantiate(HeroModel);
@@ -44,10 +44,10 @@ public class StartMenuControl : MonoBehaviour
     }
     public void NextOne()
     {
-        if (index< player.PlayerHeroList.Count-1)
+        if (index< player.PlayerHeros.Count-1)
         {
             index++;
-            GameObject NextHero = (GameObject)(Resources.Load(player.PlayerHeroList[index]));
+            GameObject NextHero = (GameObject)(Resources.Load(player.PlayerHeros[index].GetHeroName()));
             HeroModel = NextHero;
         }        
     }
@@ -56,7 +56,7 @@ public class StartMenuControl : MonoBehaviour
         if (index>0)
         {
             index--;
-            GameObject LastHero = (GameObject)(Resources.Load(player.PlayerHeroList[index]));
+            GameObject LastHero = (GameObject)(Resources.Load(player.PlayerHeros[index].GetHeroName()));
             HeroModel = LastHero;
         }        
     }
