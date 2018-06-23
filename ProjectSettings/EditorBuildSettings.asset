@@ -12,10 +12,13 @@ EditorBuildSettings:
     path: Assets/Scenes/02Start.unity
     guid: 85f59c90db921f7408d4fa8ce67dd199
   - enabled: 1
-    path: Assets/Scenes/03Dungeon.unity
+    path: Assets/Scenes/03WorldMap.unity
+    guid: 580daf923061efc448b4d2c73dac40ba
+  - enabled: 1
+    path: Assets/Scenes/04DungeonMap.unity
     guid: 689a49fd97169194a84cbb917df8835d
   - enabled: 1
-    path: Assets/Scenes/04Fight.unity
+    path: Assets/Scenes/05Fight.unity
     guid: 144344d39887d724590286e0469c3b97
   - enabled: 1
     path: Assets/Scenes/ServerClientMap.unity

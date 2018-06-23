@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;

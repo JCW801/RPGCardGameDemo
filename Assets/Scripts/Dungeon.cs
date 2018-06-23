@@ -8,7 +8,7 @@ public class Dungeon
     /// <summary>
     /// 副本深度
     /// </summary>
-    private int dungeonDepth;
+    public int DungeonDepth { get; private set; }
 
     /// <summary>
     /// 副本地图
@@ -53,7 +53,7 @@ public class Dungeon
     public Dungeon(DungeonTransferModel dungeon)
     {
         dungeonName = dungeon.DungeonName;
-        dungeonDepth = dungeon.DungeonDepth;
+        DungeonDepth = dungeon.DungeonDepth;
         lowLevelNormalMonsterRoomList = new List<List<NormalMonsterRoom>>();
         highLevelNormalMsonterRoomList = new List<List<NormalMonsterRoom>>();
         eliteMonsterRoomList = new List<List<EliteMonsterRoom>>();
@@ -143,7 +143,7 @@ public class Dungeon
                 return false;
             }
         }
-        else if (currentRoom.RoomDepth == dungeonDepth - 1)
+        else if (currentRoom.RoomDepth == DungeonDepth - 1)
         {
             currentRoom = new BossMonsterRoom();
             return true;
