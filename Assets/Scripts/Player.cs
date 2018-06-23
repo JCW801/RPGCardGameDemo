@@ -13,17 +13,17 @@ public class Player
     /// <summary>
     /// 玩家持有的英雄信息
     /// </summary>
-    public List<PlayerHero> PlayerHeros;
+    public List<PlayerHero> PlayerHeros { get; private set; }
 
     /// <summary>
     /// 玩家进入副本后的信息
     /// </summary>
-    private CardPlayer cardPlayer;
+    public CardPlayer CardPlayer { get; private set; }
 
     /// <summary>
     /// 副本信息
     /// </summary>
-    private Dungeon dungeon;
+    public Dungeon Dungeon { get; private set; }
 
     public Player(PlayerTransferModel player, GameDictionary gameDic)
     {
@@ -61,10 +61,10 @@ public class Player
 
     public bool EnterDungeon(DungeonTransferModel dungeonTransferModel, CardPlayerTransferModel cp, GameDictionary gameDic)
     {
-        if (cardPlayer == null && dungeon == null)
+        if (CardPlayer == null && Dungeon == null)
         {
-            cardPlayer = new CardPlayer(cp, gameDic);
-            dungeon = new Dungeon(dungeonTransferModel);
+            CardPlayer = new CardPlayer(cp, gameDic);
+            Dungeon = new Dungeon(dungeonTransferModel);
             return true;
         }
         else
