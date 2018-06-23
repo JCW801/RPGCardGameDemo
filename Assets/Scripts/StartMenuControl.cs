@@ -27,23 +27,16 @@ public class StartMenuControl : MonoBehaviour
         HeroModels = new GameObject[player.PlayerHeros.Count];
         if (player.PlayerName != null && player.PlayerHeros.Count != 0)
         {
-<<<<<<< HEAD
-            string name = player.PlayerHeros.ToList()[index].GetHeroName();
-            HeroName.text = name;
-            HeroModel = (GameObject)(Resources.Load(name));
-            HeroModel = Instantiate(HeroModel);
-=======
             //string name = player.PlayerHeros[index].GetHeroName();
             //HeroName.text = name;
             for (int i = 0; i < player.PlayerHeros.Count; i++)
             {
-                string name =player.PlayerHeros[i].GetHeroName();
+                string name =player.PlayerHeros.ToList()[i].GetHeroName();
                 HeroModels[i] = Resources.Load(name) as GameObject;
                 HeroModels[i] = Instantiate(HeroModels[i]);
             }
             HeroName.text = HeroModels[index].name;
             PresentHero = HeroModels[index];
->>>>>>> 6d99f778f0b562038018f54f9132276332a8acf9
         }
     }
 
@@ -65,14 +58,9 @@ public class StartMenuControl : MonoBehaviour
         if (index< player.PlayerHeros.Count-1)
         {
             index++;
-<<<<<<< HEAD
-            GameObject NextHero = (GameObject)(Resources.Load(player.PlayerHeros.ToList()[index].GetHeroName()));
-            HeroModel = NextHero;
-=======
             //GameObject NextHero = (GameObject)(Resources.Load(player.PlayerHeros[index].GetHeroName()));
             HeroName.text = HeroModels[index].name;
             PresentHero = HeroModels[index];
->>>>>>> 6d99f778f0b562038018f54f9132276332a8acf9
         }        
     }
     public void LastOne()
@@ -80,14 +68,9 @@ public class StartMenuControl : MonoBehaviour
         if (index>0)
         {
             index--;
-<<<<<<< HEAD
-            GameObject LastHero = (GameObject)(Resources.Load(player.PlayerHeros.ToList()[index].GetHeroName()));
-            HeroModel = LastHero;
-=======
             //GameObject LastHero = (GameObject)(Resources.Load(player.PlayerHeros[index].GetHeroName()));
             HeroName.text = HeroModels[0].name;
             PresentHero = HeroModels[index];
->>>>>>> 6d99f778f0b562038018f54f9132276332a8acf9
         }        
     }
     public void CreatRole()
