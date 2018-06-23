@@ -42,6 +42,7 @@ public class GameClient
     private GameClient()
     {
         GameDic = JsonConvert.DeserializeObject<GameDictionary>(JToken.Parse(File.ReadAllText("GameDic.json")).ToString());
+        GameDictionary.GameDic = GameDic;
     }
 
     public void ConnectToServer(CallbackDelegate _callback)
@@ -101,10 +102,17 @@ public class GameClient
     public void EnterDungeon(String dungeonName, CardPlayerTransferModel cardPlayer, PlayerCallbackPlayerDelegate _callback)
     {
         var playerModel = new PlayerTransferModel();
-        if (socketState == null || Player == null)
+        if (socketState == null)
         {
             playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
             playerModel.TransferMessage = "没有连接到服务器";
+            _callback(playerModel);
+            return;
+        }
+        if (Player == null)
+        {
+            playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
+            playerModel.TransferMessage = "没有登录";
             _callback(playerModel);
             return;
         }

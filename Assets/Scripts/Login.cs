@@ -8,6 +8,7 @@ using Models;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.IO;
+using System.Reflection;
 
 namespace Assets.Scripts
 {
@@ -22,6 +23,7 @@ namespace Assets.Scripts
         {
             GameClient.Client.ConnectToServer(null);
         }
+
         public void GetPlayerLoginInfo()
         {
             userName.text = "TestPlayer1";
