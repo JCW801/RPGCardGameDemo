@@ -32,7 +32,7 @@ public class Hero
     /// <summary>
     /// 英雄默认持有圣物
     /// </summary>
-    private List<Relic> heroDefaultRelics;
+    public List<Relic> heroDefaultRelics { get; private set; }
 
     /// <summary>
     /// 所有英雄专属卡牌

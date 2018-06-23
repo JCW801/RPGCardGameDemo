@@ -25,79 +25,22 @@
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>EggAABAQEoiQCQAIAAFAAGSgAIAAABAgAwQCoBAQMQg=</HashCode>
+      <HashCode>EggAABAYEoiQCQAIAAFAAGSgAIAAABAgAwQCoBAQOQg=</HashCode>
       <FileName>Assets\Scripts\CardHolder.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CardPlayer">
     <Position X="13.5" Y="7.5" Width="1.5" />
-    <AssociationLine Name="SubHero" Type="Hero">
-      <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-0.835" Y="0.151" />
-      </MemberNameLabel>
-    </AssociationLine>
-    <AssociationLine Name="CurrentDungeonRoom" Type="DungeonRoom" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="14.25" Y="7.5" />
-        <Point X="14.25" Y="4.25" />
-        <Point X="29.062" Y="4.25" />
-        <Point X="29.062" Y="5.75" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="Potions" Type="Potion" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="13.5" Y="8.188" />
-        <Point X="13.125" Y="8.188" />
-        <Point X="13.125" Y="14.718" />
-        <Point X="12" Y="14.718" />
-      </Path>
-    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAQAAACAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAAAEAAAAgAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\CardPlayer.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="MainHero" />
-      <Property Name="SubHero" />
-      <Property Name="CurrentDungeonRoom" />
-    </ShowAsAssociation>
-    <ShowAsCollectionAssociation>
-      <Property Name="Potions" />
-    </ShowAsCollectionAssociation>
   </Class>
   <Class Name="Monster">
     <Position X="20.75" Y="13.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\Monster.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Creep">
-    <Position X="16" Y="15" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Creep.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SummonedCreep">
-    <Position X="22.75" Y="15" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\SummonedCreep.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="MegaCreep">
-    <Position X="20.5" Y="15" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\MegaCreep.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="Boss">
-    <Position X="18.25" Y="15" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Assets\Scripts\Boss.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Effect">
@@ -138,7 +81,7 @@
   <Class Name="Hero">
     <Position X="13.5" Y="10" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAEAAAIgAABAAAAgAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAEAAAAAAABCIQAAAAAIAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>Assets\Scripts\Hero.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -218,21 +161,14 @@
   <Class Name="Dungeon">
     <Position X="23" Y="3" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>IAAAAAAAAAAAAACAAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAIAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
       <FileName>Assets\Scripts\Dungeon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="DungeonRoom">
     <Position X="28.5" Y="5.75" Width="2.25" />
-    <NestedTypes>
-      <Enum Name="DungeonRoom.RoomType" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>Assets\Scripts\DungeonRoom.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Enum>
-    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAQAAAAEBAQAQAAAAAAABA=</HashCode>
+      <HashCode>AAAYAAAAAAAAAAAAAAAAAAAQAAAAEBAQAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\DungeonRoom.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -262,12 +198,12 @@
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAACAAAAAQAAAEAAAgAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAQAAIAAAAgACAAAAAAAAAAIAAAAAgA=</HashCode>
       <FileName>Assets\Scripts\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="PlayerHero">
-    <Position X="8.25" Y="5.25" Width="3.75" />
+    <Position X="8" Y="6.25" Width="3.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAIAAhAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Assets\Scripts\PlayerHero.cs</FileName>
