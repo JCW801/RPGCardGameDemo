@@ -12,7 +12,6 @@ namespace Assets.Scripts
 {
     class Login : MonoBehaviour
     {
-        public static Player Player { get; private set; }
         private PlayerTransferModel playerModel = new PlayerTransferModel();
         public InputField userName;
         public InputField passWord;
@@ -24,6 +23,8 @@ namespace Assets.Scripts
         }
         public void GetPlayerLoginInfo()
         {
+            userName.text = "TestPlayer1";
+            passWord.text = "password1";
             playerModel.AccountName = userName.text;
             playerModel.Password = passWord.text;
             print("Login");
@@ -48,7 +49,6 @@ namespace Assets.Scripts
                 }
                 else if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Accept)
                 {
-                    Player = new Player(playerModel, JsonConvert.DeserializeObject<GameDictionary>(JToken.Parse(File.ReadAllText("GameDic.json")).ToString()));
                     connectInfo.text = playerModel.TransferMessage + "   载入中。。。请稍候";
                     StartCoroutine(LoadScene());
                 }
@@ -57,7 +57,9 @@ namespace Assets.Scripts
 
         IEnumerator LoadScene()
         {
+            print("load");
             yield return new WaitForSeconds(2);
+            print("2");
             SceneManager.LoadScene("02Start");
         }
         public void InputAgain()

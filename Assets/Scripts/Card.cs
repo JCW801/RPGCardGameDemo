@@ -95,7 +95,7 @@ public class Card
         foreach (var item in card.CardEffectsString)
         {
             string[] s = item.Split(' ');
-            var effectType = System.Type.GetType("Models." + s[0] + "Effect");
+            var effectType = System.Type.GetType(s[0] + "Effect");
             Effect effect = Activator.CreateInstance(effectType) as Effect;
             List<string> temp = new List<string>();
             foreach (var i in Enumerable.Range(1, s.Length - 1))
@@ -110,7 +110,7 @@ public class Card
         foreach (var item in card.CardEffectsStringAfterUpgrade)
         {
             string[] s = item.Split(' ');
-            var effectType = System.Type.GetType("Models." + s[0] + "Effect");
+            var effectType = System.Type.GetType(s[0] + "Effect");
             Effect effect = Activator.CreateInstance(effectType) as Effect;
             List<string> temp = new List<string>();
             foreach (var i in Enumerable.Range(1, s.Length - 1))

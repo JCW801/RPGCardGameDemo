@@ -62,7 +62,7 @@ public class Buff
         buffEffects = new List<BuffEffect>();
         foreach (var item in b.BuffEffects)
         {
-            var effectType = Type.GetType("Models." + item + "BuffEffect");
+            var effectType = Type.GetType(item + "BuffEffect");
             BuffEffect effect = Activator.CreateInstance(effectType) as BuffEffect;
             buffEffects.Add(effect);
         }

@@ -42,7 +42,7 @@ public class Relic
         foreach (var item in relic.RelicEffectsString)
         {
             string[] s = item.Split(' ');
-            var effectType = Type.GetType("Models." + s[0] + "Effect");
+            var effectType = Type.GetType(s[0] + "Effect");
             Effect effect = Activator.CreateInstance(effectType) as Effect;
             List<string> temp = new List<string>();
             foreach (var i in Enumerable.Range(1, s.Length - 1))
