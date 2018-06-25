@@ -93,7 +93,7 @@ public class GameClient
 
         if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Accept)
         {
-            Player = new Player(playerModel, GameDic);
+            Player = new Player(playerModel);
         }
         playerCallback(playerModel);
         ss.SB = new System.Text.StringBuilder();
@@ -142,7 +142,7 @@ public class GameClient
 
         if (Player != null && playerModel.TransferState == PlayerTransferModel.TransferStateType.Accept)
         {
-            Player.EnterDungeon(playerModel.Dungeon, playerModel.CardPlayer, GameDic);
+            Player.EnterDungeon(playerModel.Dungeon, playerModel.CardPlayer);
         }
         playerCallback(playerModel);
         ss.SB = new System.Text.StringBuilder();
