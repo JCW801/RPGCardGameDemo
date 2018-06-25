@@ -31,6 +31,8 @@ namespace Assets.Scripts
             playerModel.AccountName = userName.text;
             playerModel.Password = passWord.text;
             print("Login");
+            go.SetActive(true);
+            connectInfo.text = playerModel.TransferMessage + "   载入中。。。请稍候";
             GameClient.Client.Login(playerModel.AccountName, playerModel.Password, _callback);
         }
 
@@ -44,7 +46,6 @@ namespace Assets.Scripts
             //throw new NotImplementedException();
             if (playerModel != null && (playerModel.TransferMessage != null || playerModel.PlayerName != null))
             {
-                go.SetActive(true);
                 if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Error || playerModel.TransferState == PlayerTransferModel.TransferStateType.Decline)
                 {
                     connectInfo.text = playerModel.TransferMessage;
@@ -60,8 +61,8 @@ namespace Assets.Scripts
 
         IEnumerator LoadScene()
         {
-            print("load");
-            yield return new WaitForSeconds(2);
+            //print("load");
+            yield return new WaitForSeconds(1);
             print("2");
             SceneManager.LoadScene("02Start");
         }

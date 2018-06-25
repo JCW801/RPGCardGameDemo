@@ -47,7 +47,17 @@ public class StartMenuControl : MonoBehaviour
     }
     public void NextScene()
     {
+        CardPlayerTransferModel cardPlayer = new CardPlayerTransferModel();
+        cardPlayer.MainHero = "Warrior";
+        cardPlayer.CardDic = GameClient.Client.GameDic.HeroDic["Warrior"].HeroBasicCard;
+
+        GameClient.Client.EnterDungeon("TestDungeon", cardPlayer, EnterDungeon);
+        
         StartCoroutine(LoadScene());
+    }
+    private void EnterDungeon(PlayerTransferModel player)
+    {
+
     }
     public void HeroModelControl()
     {
@@ -79,7 +89,7 @@ public class StartMenuControl : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        async = SceneManager.LoadSceneAsync("03DungeonMap");
+        async = SceneManager.LoadSceneAsync("04DungeonMap");
         yield return async;
     }
 }
