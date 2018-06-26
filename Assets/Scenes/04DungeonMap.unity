@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -216,6 +216,14 @@ Prefab:
       value: 
       objectReference: {fileID: 21300000, guid: 157a8a54b6331114fae3000a7729dd63,
         type: 3}
+    - target: {fileID: 1733625583928364, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454785706147308, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
   m_IsPrefabParent: 0
@@ -561,6 +569,14 @@ Prefab:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1733625583928364, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1454785706147308, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5b6329c383c8a1045938fd0d3aa9fb93, type: 2}
   m_IsPrefabParent: 0
@@ -581,7 +597,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1045081222
 RectTransform:
   m_ObjectHideFlags: 0
@@ -813,8 +829,8 @@ Camera:
   near clip plane: 0.3
   far clip plane: 2000
   field of view: 60
-  orthographic: 0
-  orthographic size: 5
+  orthographic: 1
+  orthographic size: 960
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

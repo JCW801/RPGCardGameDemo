@@ -16,11 +16,11 @@ public class CreateDungeionMap : MonoBehaviour
     
     void Start()
     {
-        //List<Dungeon> dungeonsChosed = new List<Dungeon>();
-        //Player player = GameClient.Client.Player;
-        //dic = player.GetRoomMap();
-        //prefab = Resources.Load("Image") as GameObject;
-        //Create();
+        List<Dungeon> dungeonsChosed = new List<Dungeon>();
+        Player player = GameClient.Client.Player;
+        dic = player.GetRoomMap();
+        prefab = Resources.Load("Image") as GameObject;
+        Create();
     }
 
     // Update is called once per frame
@@ -77,8 +77,7 @@ public class CreateDungeionMap : MonoBehaviour
                     default:
                         break;
                 }
-
-
+                
             }
         }
     }

@@ -20,7 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4948800813687156}
   - component: {fileID: 120273465750340162}
-  - component: {fileID: 114677859796596010}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -41,19 +40,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114677859796596010
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1753017605285292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b11d0fc9c1ced8041b9ddb015c26587e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cube: {fileID: 0}
-  target: {fileID: 0}
 --- !u!120 &120273465750340162
 LineRenderer:
   m_ObjectHideFlags: 1
@@ -93,7 +79,7 @@ LineRenderer:
   - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 2
-    widthMultiplier: 5
+    widthMultiplier: 1
     widthCurve:
       serializedVersion: 2
       m_Curve:
