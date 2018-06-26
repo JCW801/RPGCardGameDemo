@@ -56,8 +56,6 @@ public class StartMenuControl : MonoBehaviour
         cardPlayer.CardDic = GameClient.Client.GameDic.HeroDic["Warrior"].HeroBasicCard;
 
         GameClient.Client.EnterDungeon("TestDungeon", cardPlayer, EnterDungeon);
-        
-        
     }
     private void EnterDungeon(PlayerTransferModel player)
     {
@@ -95,5 +93,7 @@ public class StartMenuControl : MonoBehaviour
     {
         async = SceneManager.LoadSceneAsync("04DungeonMap");
         yield return async;
+        //yield return new WaitForSeconds(1);
+        //SceneManager.LoadScene("04DungeonMap");
     }
 }
