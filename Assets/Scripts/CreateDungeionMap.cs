@@ -14,7 +14,8 @@ public class CreateDungeionMap : MonoBehaviour
     void Start()
     {
         List<Dungeon> dungeonsChosed = new List<Dungeon>();
-        dic = GameClient.Client.Player.GetRoomMap();
+        Player player = GameClient.Client.Player;
+        dic = player.GetRoomMap();
         prefab = Resources.Load("DungeonRoomImage") as GameObject;
         Create();
     }

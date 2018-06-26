@@ -9,12 +9,13 @@ using Models;
 public class StartMenuControl : MonoBehaviour
 {
 
-    Player player;
+    //Player player;
     public Text HeroName;
     GameObject[] HeroModels;
     GameObject PresentHero ;
     AsyncOperation async;
     int index = 0;
+    bool isReadyToChangeScene = false;
     //public Button CreatNewRole;
     //public Button NextRole;
     //public Button LastRole;
@@ -23,15 +24,15 @@ public class StartMenuControl : MonoBehaviour
     void Start()
     {
         PresentHero = new GameObject();
-        player = GameClient.Client.Player;
-        HeroModels = new GameObject[player.PlayerHeros.Count];
-        if (player.PlayerName != null && player.PlayerHeros.Count != 0)
+        //player = GameClient.Client.Player;
+        HeroModels = new GameObject[GameClient.Client.Player.PlayerHeros.Count];
+        if (GameClient.Client.Player.PlayerName != null && GameClient.Client.Player.PlayerHeros.Count != 0)
         {
             //string name = player.PlayerHeros[index].GetHeroName();
             //HeroName.text = name;
-            for (int i = 0; i < player.PlayerHeros.Count; i++)
+            for (int i = 0; i < GameClient.Client.Player.PlayerHeros.Count; i++)
             {
-                string name =player.PlayerHeros.ToList()[i].GetHeroName();
+                string name = GameClient.Client.Player.PlayerHeros.ToList()[i].GetHeroName();
                 HeroModels[i] = Resources.Load(name) as GameObject;
                 HeroModels[i] = Instantiate(HeroModels[i]);
             }
@@ -43,7 +44,10 @@ public class StartMenuControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (isReadyToChangeScene)
+        {
+            StartCoroutine(LoadScene());
+        }
     }
     public void NextScene()
     {
@@ -53,11 +57,11 @@ public class StartMenuControl : MonoBehaviour
 
         GameClient.Client.EnterDungeon("TestDungeon", cardPlayer, EnterDungeon);
         
-        StartCoroutine(LoadScene());
+        
     }
     private void EnterDungeon(PlayerTransferModel player)
     {
-
+        isReadyToChangeScene = true;
     }
     public void HeroModelControl()
     {
@@ -65,7 +69,7 @@ public class StartMenuControl : MonoBehaviour
     }
     public void NextOne()
     {
-        if (index< player.PlayerHeros.Count-1)
+        if (index< GameClient.Client.Player.PlayerHeros.Count-1)
         {
             index++;
             //GameObject NextHero = (GameObject)(Resources.Load(player.PlayerHeros[index].GetHeroName()));
