@@ -147,4 +147,70 @@ public class GameClient
         playerCallback(playerModel);
         ss.SB = new System.Text.StringBuilder();
     }
+
+
+    public void EnterDungeonRoom(int index, PlayerCallbackPlayerDelegate _callback)
+    {
+        var playerModel = new PlayerTransferModel();
+        if (socketState == null)
+        {
+            playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
+            playerModel.TransferMessage = "没有连接到服务器";
+            _callback(playerModel);
+            return;
+        }
+        if (Player == null)
+        {
+            playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
+            playerModel.TransferMessage = "没有登录";
+            _callback(playerModel);
+            return;
+        }
+        if (!Player.EnteredDungeon())
+        {
+            playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
+            playerModel.TransferMessage = "没有进入副本";
+            _callback(playerModel);
+            return;
+        }
+        if (!Player.EnterDungeonRoom(index))
+        {
+            playerModel.TransferState = PlayerTransferModel.TransferStateType.Error;
+            playerModel.TransferMessage = "无效房间编号";
+            _callback(playerModel);
+            return;
+        }
+
+        playerModel.TransferRequest = PlayerTransferModel.TransferRequestType.EnterDungeonRoom;
+        playerModel.TransferMessage = index + "";
+
+        socketState.CallBackFunction = EnterDungeonRoomCallback;
+        NetworkController.Send(socketState, JsonConvert.SerializeObject(playerModel));
+        NetworkController.getData(socketState);
+        playerCallback = _callback;
+    }
+
+    private void EnterDungeonRoomCallback(SocketState ss)
+    {
+        socketState = ss;
+        PlayerTransferModel playerModel = null;
+        try
+        {
+            playerModel = JsonConvert.DeserializeObject<PlayerTransferModel>(ss.SB.ToString());
+        }
+        catch
+        {
+            NetworkController.getData(ss);
+            return;
+        }
+
+        if (playerModel.TransferState == PlayerTransferModel.TransferStateType.Accept)
+        {
+            int i = Convert.ToInt32(playerModel.TransferMessage);
+            Player.SetDungeonRoom(i);
+        }
+
+        playerCallback(playerModel);
+        ss.SB = new System.Text.StringBuilder();
+    }
 }
