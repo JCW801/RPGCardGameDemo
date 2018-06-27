@@ -23,17 +23,11 @@ public class CreateDungeionMap : MonoBehaviour
 
     void Start()
     {
-<<<<<<< HEAD
         //gosdic = new Dictionary<int, Dictionary<int, GameObject>>();
         List<Dungeon> dungeonsChosed = new List<Dungeon>();
         Player player = GameClient.Client.Player;
         dic = player.GetRoomMap();
         goArr = new GameObject[dic.Count, 7];
-=======
-        List<Dungeon> dungeonsChosed = new List<Dungeon>();
-        Player player = GameClient.Client.Player;
-        dic = player.GetRoomMap();
->>>>>>> 4e7ae608e44d4f6eb6801038f088967a1668396f
         prefab = Resources.Load("Image") as GameObject;
         Create();
     }
@@ -114,7 +108,6 @@ public class CreateDungeionMap : MonoBehaviour
                     default:
                         break;
                 }
-<<<<<<< HEAD
                 go.transform.localScale = Vector3.one;
 
                 //图表之间连线
@@ -129,9 +122,6 @@ public class CreateDungeionMap : MonoBehaviour
                         DrawLine(go, goArr[i + 1, j + k - 1]);
                     }
                 }
-=======
-                
->>>>>>> 4e7ae608e44d4f6eb6801038f088967a1668396f
             }
         }
     }
