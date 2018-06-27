@@ -32,7 +32,7 @@ namespace Assets.Scripts
             playerModel.Password = passWord.text;
             print("Login");
             go.SetActive(true);
-            connectInfo.text = playerModel.TransferMessage + "   载入中。。。请稍候";
+            connectInfo.text = playerModel.TransferMessage + "   连接服务器中。。。请稍候";
             GameClient.Client.Login(playerModel.AccountName, playerModel.Password, _callback);
         }
 
@@ -63,7 +63,7 @@ namespace Assets.Scripts
         {
             //print("load");
             yield return new WaitForSeconds(1);
-            print("2");
+            print("Load02");
             SceneManager.LoadScene("02Start");
         }
         public void InputAgain()

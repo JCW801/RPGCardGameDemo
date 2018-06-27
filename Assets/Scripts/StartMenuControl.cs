@@ -14,6 +14,8 @@ public class StartMenuControl : MonoBehaviour
     GameObject[] HeroModels;
     GameObject PresentHero ;
     AsyncOperation async;
+    //public Text connectInfo;
+    //public GameObject go;
     int index = 0;
     bool isReadyToChangeScene = false;
     //public Button CreatNewRole;
@@ -47,19 +49,33 @@ public class StartMenuControl : MonoBehaviour
         if (isReadyToChangeScene)
         {
             StartCoroutine(LoadScene());
+            isReadyToChangeScene = false;
         }
     }
     public void NextScene()
     {
+        //go.SetActive(true);
         CardPlayerTransferModel cardPlayer = new CardPlayerTransferModel();
         cardPlayer.MainHero = "Warrior";
         cardPlayer.CardDic = GameClient.Client.GameDic.HeroDic["Warrior"].HeroBasicCard;
 
+        
         GameClient.Client.EnterDungeon("TestDungeon", cardPlayer, EnterDungeon);
+        
     }
     private void EnterDungeon(PlayerTransferModel player)
     {
-        isReadyToChangeScene = true;
+        
+        if (player.TransferState==PlayerTransferModel.TransferStateType.Accept)
+        {
+            //connectInfo.text = "登录成功";
+            isReadyToChangeScene = true;
+        }
+        else
+        {
+            //connectInfo.text = player.TransferMessage + "数据异常";
+            print("数据异常");
+        }        
     }
     public void HeroModelControl()
     {
@@ -91,8 +107,9 @@ public class StartMenuControl : MonoBehaviour
     }
     IEnumerator LoadScene()
     {
-        async = SceneManager.LoadSceneAsync("04DungeonMap");
-        yield return async;
+        print("Load04");
+        async = SceneManager.LoadSceneAsync("04DungeonMap");        
+        yield return async;        
         //yield return new WaitForSeconds(1);
         //SceneManager.LoadScene("04DungeonMap");
     }
