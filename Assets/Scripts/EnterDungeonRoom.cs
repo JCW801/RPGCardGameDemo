@@ -25,11 +25,12 @@ public class EnterDungeonRoom : MonoBehaviour {
         //print(index);
         //Player player = GameClient.Client.Player;
         //DungeonRoom dungeonRoom= GameClient.Client.Player.GetCurrentRoom();
-        
+        print("GetInDungeon" + depth + "," + index);
         if (GameClient.Client.Player.GetCurrentRoom()!=null)
         {
             currentIndex = GameClient.Client.Player.GetCurrentRoom().RoomIndex;
         }
+        print("回传给服务器进入dungeon的值： " + (index - currentIndex));
         GameClient.Client.EnterDungeonRoom(index - currentIndex,LoadScene);
         //GameClient.Client.Player.EnterDungeonRoom(index-GameClient.Client.Player.GetCurrentRoom().RoomIndex);
         

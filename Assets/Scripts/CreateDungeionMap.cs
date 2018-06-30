@@ -17,7 +17,7 @@ public class CreateDungeionMap : MonoBehaviour
     public Camera Uicamera;
     bool drag = false;
     Vector3 startPos;
-    public DungeonRoom curreentRoom;
+    public DungeonRoom currentRoom;
     //Dictionary<int, Dictionary<int, GameObject>> gosdic;
     //public GameObject from;
     //public GameObject to;
@@ -51,7 +51,11 @@ public class CreateDungeionMap : MonoBehaviour
         goBoss.GetComponentInChildren<Image>().overrideSprite = Bosssprite;
         goBoss.transform.localScale = 3 * Vector3.one;
 
-        curreentRoom = GameClient.Client.Player.GetCurrentRoom();
+        currentRoom = GameClient.Client.Player.GetCurrentRoom();
+        if (currentRoom!=null)
+        {
+            print("currntRoom" + currentRoom.RoomDepth+"," + currentRoom.RoomIndex);
+        }        
         //初始化所有房间图标
         for (int i = dungeonsList.Count - 1; i >= 0; i--)
         {
@@ -74,30 +78,6 @@ public class CreateDungeionMap : MonoBehaviour
                 //godic.Add(j, go);
                 //gosdic.Add(i, godic);
 
-
-                if (curreentRoom == null && i == 0)
-                {
-                    go.GetComponentInChildren<Button>().enabled = true;
-                }
-                else if(curreentRoom!=null && i!=dungeonsList.Count-1)
-                {
-                    if (curreentRoom.HasNextLeftRoom)
-                    {
-                        goArr[curreentRoom.RoomDepth, curreentRoom.RoomIndex - 2].GetComponentInChildren<Button>().enabled = true;
-                    }
-                    if (curreentRoom.HasNextMiddleRoom)
-                    {
-                        goArr[curreentRoom.RoomDepth, curreentRoom.RoomIndex-1].GetComponentInChildren<Button>().enabled = true ;
-                    }
-                    if (curreentRoom.HasNextRightRoom)
-                    {
-                        goArr[curreentRoom.RoomDepth, curreentRoom.RoomIndex].GetComponentInChildren<Button>().enabled = true;
-                    }
-                }
-                else
-                {
-                    goBoss.GetComponentInChildren<Button>().enabled = true;
-                }
                 goArr[i, j] = go;
                 go.transform.SetParent(mapPanel);
                 go.transform.localPosition = new Vector3((-420 + 140 * j), (-800 + 200 * i), 0);
@@ -268,6 +248,37 @@ public class CreateDungeionMap : MonoBehaviour
                 //}
             }
         }
+
+
+        //设置有效 可进入房间
+        if (currentRoom == null )
+        {
+            for (int i = 0; i < goArr.GetLength(1); i++)
+            {
+                if (goArr[0, i] == null) continue;                
+                goArr[0,i].GetComponentInChildren<Button>().enabled = true;
+            }
+            //go.GetComponentInChildren<Button>().enabled = true;
+        }
+        else if (currentRoom != null && currentRoom.RoomDepth != dungeonsList.Count - 1)
+        {
+            if (currentRoom.HasNextLeftRoom)
+            {
+                goArr[currentRoom.RoomDepth+1, currentRoom.RoomIndex - 1].GetComponentInChildren<Button>().enabled = true;
+            }
+            if (currentRoom.HasNextMiddleRoom)
+            {
+                goArr[currentRoom.RoomDepth+1, currentRoom.RoomIndex].GetComponentInChildren<Button>().enabled = true;
+            }
+            if (currentRoom.HasNextRightRoom)
+            {
+                goArr[currentRoom.RoomDepth+1, currentRoom.RoomIndex+1].GetComponentInChildren<Button>().enabled = true;
+            }
+        }
+        else
+        {
+            goBoss.GetComponentInChildren<Button>().enabled = true;
+        }
     }
 
     //public void Draw()
@@ -297,7 +308,7 @@ public class CreateDungeionMap : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) == true && drag == false)
         {
-            print("start drag");
+           // print("start drag");
             startPos = Input.mousePosition;
             drag = true;
         }
@@ -311,9 +322,9 @@ public class CreateDungeionMap : MonoBehaviour
             //print("drag");
             //print("Input.mousePosition" + Input.mousePosition);
             //print("startPos" + startPos);
-            print("Uicamera" + Uicamera.transform.localPosition);
+            //print("Uicamera" + Uicamera.transform.localPosition);
             Vector3 move = Input.mousePosition - startPos;
-            print("move.y" + move.y);
+            //print("move.y" + move.y);
             if (Uicamera.transform.localPosition.y <= 1920 && move.y > 0)
             {
                 Uicamera.transform.localPosition += (new Vector3(0, move.y, 0));
