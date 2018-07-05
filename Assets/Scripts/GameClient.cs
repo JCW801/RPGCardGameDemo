@@ -41,12 +41,12 @@ public class GameClient
 
     private GameClient()
     {
-        GameDic = JsonConvert.DeserializeObject<GameDictionary>(JToken.Parse(File.ReadAllText("GameDic.json")).ToString());
-        GameDictionary.GameDic = GameDic;
     }
 
-    public void ConnectToServer(CallbackDelegate _callback)
+    public void ConnectToServer(string gameDicString, CallbackDelegate _callback)
     {
+        GameDic = JsonConvert.DeserializeObject<GameDictionary>(gameDicString);
+        GameDictionary.GameDic = GameDic;
         NetworkController.ConnectToServer(ConnectToServerCallback, ServerIp);
         callback = _callback;
     }

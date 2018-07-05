@@ -21,7 +21,8 @@ namespace Assets.Scripts
         public GameObject go;
         private void Start()
         {
-            GameClient.Client.ConnectToServer(null);
+            TextAsset gameDicString = Resources.Load<TextAsset>("Json/GameDic");
+            GameClient.Client.ConnectToServer(gameDicString.text, null);
         }
 
         public void GetPlayerLoginInfo()
