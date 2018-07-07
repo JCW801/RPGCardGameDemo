@@ -306,16 +306,24 @@ public class CreateDungeionMap : MonoBehaviour
     //界面滑动
     public void CameraMove()
     {
-        if (Input.GetMouseButtonDown(0) == true && drag == false)
+        //print("drag:" + drag);
+        if (Input.GetMouseButtonDown(0))
         {
-           // print("start drag");
             startPos = Input.mousePosition;
+        }
+        if (Input.GetMouseButton(0))// == true && drag == false)
+        {
+            //print("start drag");
             drag = true;
         }
-        else if (Input.GetMouseButtonDown(0) == true && drag == true)
+        else
         {
             drag = false;
         }
+        //else if (Input.GetMouseButtonDown(0) == true && drag == true)
+        //{
+        //    drag = false;
+        //}
 
         if (drag == true)
         {
@@ -336,7 +344,6 @@ public class CreateDungeionMap : MonoBehaviour
                 //startPos = Input.mousePosition;
             }
             startPos = Input.mousePosition;
-
         }
     }
 

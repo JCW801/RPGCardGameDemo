@@ -1,0 +1,19 @@
+ManifestFileVersion: 0
+CRC: 1088441757
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 135d26d734cf80a8e8a1219bbe12166d
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: 31d6cfe0d16ae931b73c59d7e0c089c0
+HashAppended: 0
+ClassTypes: []
+Assets:
+- Assets/Scenes/02Start.unity
+- Assets/Scenes/03WorldMap.unity
+- Assets/Scenes/05Fight.unity
+- Assets/Scenes/ServerClientMap.unity
+- "Assets/Scenes/01Menu\uFF08Login\uFF09.unity"
+- Assets/Scenes/04DungeonMap.unity
+Dependencies: []

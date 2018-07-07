@@ -52,6 +52,7 @@ public class StartMenuControl : MonoBehaviour
             isReadyToChangeScene = false;
         }
     }
+
     public void NextScene()
     {
         //go.SetActive(true);
@@ -63,6 +64,7 @@ public class StartMenuControl : MonoBehaviour
         GameClient.Client.EnterDungeon("TestDungeon", cardPlayer, EnterDungeon);
         
     }
+
     private void EnterDungeon(PlayerTransferModel player)
     {
         
@@ -77,10 +79,12 @@ public class StartMenuControl : MonoBehaviour
             print("数据异常");
         }        
     }
+
     public void HeroModelControl()
     {
 
     }
+
     public void NextOne()
     {
         if (index< GameClient.Client.Player.PlayerHeros.Count-1)
@@ -91,6 +95,7 @@ public class StartMenuControl : MonoBehaviour
             PresentHero = HeroModels[index];
         }        
     }
+
     public void LastOne()
     {
         if (index>0)
@@ -101,10 +106,12 @@ public class StartMenuControl : MonoBehaviour
             PresentHero = HeroModels[index];
         }        
     }
+
     public void CreatRole()
     {
 
     }
+
     IEnumerator LoadScene()
     {
         print("Load04");

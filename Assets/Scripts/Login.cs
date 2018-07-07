@@ -35,7 +35,6 @@ namespace Assets.Scripts
             connectInfo.text = playerModel.TransferMessage + "   连接服务器中。。。请稍候";
             GameClient.Client.Login(playerModel.AccountName, playerModel.Password, _callback);
         }
-
         private void _callback(PlayerTransferModel _player)
         {
             playerModel = _player;
@@ -66,6 +65,7 @@ namespace Assets.Scripts
             print("Load02");
             SceneManager.LoadScene("02Start");
         }
+
         public void InputAgain()
         {
             go.SetActive(false);

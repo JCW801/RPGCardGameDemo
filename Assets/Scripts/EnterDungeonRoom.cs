@@ -11,6 +11,7 @@ public class EnterDungeonRoom : MonoBehaviour {
     public int depth;
     public int index;
     int currentIndex = 0;
+    bool isEnter = false;
     void Start ()
     {
         
@@ -18,8 +19,13 @@ public class EnterDungeonRoom : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        if (isEnter)
+        {
+            SceneManager.LoadScene("03WorldMap");
+            isEnter = false;
+        }
 	}
+
     public void Enter()
     {
         //print(index);
@@ -35,8 +41,10 @@ public class EnterDungeonRoom : MonoBehaviour {
         //GameClient.Client.Player.EnterDungeonRoom(index-GameClient.Client.Player.GetCurrentRoom().RoomIndex);
         
     }
+
     public void LoadScene(PlayerTransferModel player)
     {
+        print("player.TransferState:" + player.TransferState);
         if (player.TransferState == PlayerTransferModel.TransferStateType.Accept)
         {
             //var i = GameClient.Client.Player.GetCurrentRoom().RoomDepth;
@@ -44,7 +52,7 @@ public class EnterDungeonRoom : MonoBehaviour {
             //SceneManager.LoadScene("05Fight");
 
             //播一个花圈的动画
+            isEnter = true;
         }
-
     }
 }
